@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 1 · O que é música — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub" data-site="tagline">Site de aulas de música: teoria e prática de piano popular</span></span>
+    </a>
+    <a class="header-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="lesson-title">
+    <span class="kicker">Aula 1</span>
+    <h1>O que é música</h1>
+    <p>Antes de tocar, vamos entender do que a música é feita.</p>
+  </div>
+
+  <section class="card" aria-labelledby="t-def">
+    <h2 id="t-def">Música é…</h2>
+    <p class="big-def">a arte de organizar <em>sons</em> e <em>silêncios</em> no <em>tempo</em>.</p>
+    <svg class="wave" id="wave" viewBox="0 0 320 74" role="img" aria-label="Desenho de som e silêncio: ondas e linhas retas"></svg>
+    <p>O silêncio também é música: são as <strong>pausas</strong>, que dão respiro aos sons.</p>
+    <div class="btn-row"><button class="play" type="button" data-sound="somSilencio">Ouvir som e silêncio</button></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-elem">
+    <h2 id="t-elem">Os 3 elementos da música</h2>
+    <div class="grid g3">
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l11-2v12"/><circle cx="6" cy="18" r="3" fill="#C9A227"/><circle cx="17" cy="16" r="3" fill="#C9A227"/></svg></span>Melodia</h3>
+        <p>Notas tocadas <strong>uma depois da outra</strong>. É a parte que a gente canta.</p>
+        <div class="vf" id="vf-mel"></div>
+        <div class="btn-row"><button class="play" type="button" data-sound="melodia">Ouvir</button></div>
+      </div>
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3" fill="#C9A227"/><circle cx="12" cy="12" r="3" fill="#C9A227"/><circle cx="12" cy="18" r="3" fill="#C9A227"/></svg></span>Harmonia</h3>
+        <p>Notas tocadas <strong>ao mesmo tempo</strong>, formando acordes. É o acompanhamento.</p>
+        <div class="vf" id="vf-har"></div>
+        <div class="btn-row"><button class="play" type="button" data-sound="harmonia">Ouvir</button></div>
+      </div>
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8L14 4h-4z"/><path d="M12 16l5-9"/></svg></span>Ritmo</h3>
+        <p>A <strong>duração</strong> dos sons e das pausas. É o “balanço” da música.</p>
+        <div class="vf" id="vf-rit"></div>
+        <div class="btn-row"><button class="play" type="button" data-sound="ritmo">Ouvir</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="t-prop">
+    <h2 id="t-prop">As qualidades do som</h2>
+    <p>Todo som tem quatro características. Toque e compare:</p>
+    <div class="grid g2m g4">
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20V5M3 9l4-4 4 4"/><path d="M17 4v15M13 15l4 4 4-4"/></svg></span>Altura</h3>
+        <p>Grave (grosso) ou agudo (fino).</p>
+        <div class="btn-row"><button class="play alt" type="button" data-sound="grave">Grave</button><button class="play" type="button" data-sound="agudo">Agudo</button></div>
+      </div>
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Duração</h3>
+        <p>Curto ou longo.</p>
+        <div class="btn-row"><button class="play alt" type="button" data-sound="curto">Curto</button><button class="play" type="button" data-sound="longo">Longo</button></div>
+      </div>
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z" fill="#C9A227"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></span>Intensidade</h3>
+        <p>Fraco ou forte (o volume).</p>
+        <div class="btn-row"><button class="play alt" type="button" data-sound="fraco">Fraco</button><button class="play" type="button" data-sound="forte">Forte</button></div>
+      </div>
+      <div class="mini">
+        <h3><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-6 4-6 6 0s4 6 6 0 4-6 6 0"/></svg></span>Timbre</h3>
+        <p>A “voz” de cada instrumento.</p>
+        <div class="btn-row"><button class="play alt" type="button" data-sound="piano">Piano</button><button class="play" type="button" data-sound="flauta">Flauta</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card theory" aria-labelledby="t-resumo">
+    <h2 id="t-resumo">Resumo</h2>
+    <div class="callout"><strong>Melodia</strong> = notas em sequência · <strong>Harmonia</strong> = notas juntas · <strong>Ritmo</strong> = tempo e duração.</div>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="../index.html"><small>‹ Início</small><b>Lista de aulas</b></a>
+    <a class="nav-next" href="aula-02-as-notas-musicais.html"><small>Próxima aula ›</small><b>2 · As notas musicais</b></a>
+  </nav>
+</main>
+
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 1</footer>
+<script src="../assets/js/vendor/vexflow-bravura.js"></script>
+<script src="../assets/js/piano.js"></script>
+<script src="../assets/js/lessons-common.js"></script>
+<script src="../assets/js/aula-01-musica.js"></script>
+</body>
+</html>

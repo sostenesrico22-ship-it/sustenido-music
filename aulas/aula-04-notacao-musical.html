@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 4 · Notação musical — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub" data-site="tagline">Site de aulas de música: teoria e prática de piano popular</span></span>
+    </a>
+    <a class="header-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="lesson-title">
+    <span class="kicker">Aula 4</span>
+    <h1>Notação musical</h1>
+    <p>Como ler a partitura, passo a passo.</p>
+  </div>
+
+  <section class="card" aria-labelledby="t-part">
+    <h2 id="t-part">O que é partitura</h2>
+    <p><strong>Partitura</strong> é a música escrita. Ela mostra <strong>quais notas</strong> tocar, <strong>quanto tempo</strong> dura cada uma e com <strong>qual mão</strong>.</p>
+    <p>As notas são escritas na <strong>pauta</strong> (ou pentagrama): <strong>5 linhas</strong> e <strong>4 espaços</strong>, contados <strong>de baixo para cima</strong>.</p>
+    <svg class="art" id="pauta-art" viewBox="0 0 320 102" role="img" aria-label="Pauta com 5 linhas numeradas de baixo para cima e 4 espaços"></svg>
+  </section>
+
+  <section class="card" aria-labelledby="t-claves">
+    <h2 id="t-claves">Clave de Sol e Clave de Fá</h2>
+    <p>A <strong>clave</strong> fica no começo da pauta e diz o nome das notas.</p>
+    <div class="grid g2">
+      <div class="mini">
+        <h3>Clave de Sol <span class="tag-hand rh">Mão direita</span></h3>
+        <div class="vf" id="vf-sol"></div>
+        <p>Ela “enrola” na <strong>2ª linha</strong>: a nota nessa linha é o <strong>Sol</strong>.</p>
+        <div class="btn-row"><button class="play" type="button" data-sound="sol">Ouvir o Sol</button></div>
+      </div>
+      <div class="mini">
+        <h3>Clave de Fá <span class="tag-hand lh">Mão esquerda</span></h3>
+        <div class="vf" id="vf-fa"></div>
+        <p>Os dois pontinhos ficam em volta da <strong>4ª linha</strong>: a nota nessa linha é o <strong>Fá</strong>.</p>
+        <div class="btn-row"><button class="play" type="button" data-sound="fa">Ouvir o Fá</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="t-notas">
+    <h2 id="t-notas">As notas na partitura</h2>
+    <p>Toque numa nota (ou numa tecla) para ouvir e ver onde ela fica.</p>
+    <div class="staff-label"><i class="dot rh"></i>Clave de Sol</div>
+    <div class="vf tap-staff" id="vf-notes-sol"></div>
+    <div class="staff-label"><i class="dot lh"></i>Clave de Fá</div>
+    <div class="vf tap-staff" id="vf-notes-fa"></div>
+    <div class="key-info" aria-live="polite"><div class="name" id="ni-name">—</div><div class="sub" id="ni-sub">Toque numa nota</div></div>
+    <div id="kb-mini"></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-sup">
+    <h2 id="t-sup">Linhas suplementares e pauta dupla</h2>
+    <p>Quando a nota não cabe na pauta, usamos <strong>linhas suplementares</strong>: risquinhos extras. O <strong>Dó central</strong> fica numa delas.</p>
+    <div class="vf" id="vf-grand"></div>
+    <p>No piano lemos a <strong>pauta dupla</strong>: clave de Sol em cima (mão direita) e clave de Fá embaixo (mão esquerda), unidas pela chave. Os dois Dós acima são <strong>a mesma tecla</strong>.</p>
+    <div class="btn-row"><button class="play" type="button" data-sound="central">Ouvir o Dó central</button></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-fig">
+    <h2 id="t-fig">Figuras e pausas</h2>
+    <p>A <strong>figura</strong> mostra quanto tempo a nota dura. Cada uma tem a sua <strong>pausa</strong> (silêncio) com a mesma duração.</p>
+    <div class="grid g2m g4" id="figs"></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-comp">
+    <h2 id="t-comp">Compasso 4/4 e barras</h2>
+    <div class="vf" id="vf-comp"></div>
+    <p><strong>4/4</strong>: cada compasso tem <strong>4 tempos</strong>, e a semínima vale 1 tempo. As <strong>barras</strong> separam os compassos; a <strong>barra final</strong> (dupla) mostra o fim da música.</p>
+    <div class="btn-row"><button class="play" type="button" data-sound="compasso">Ouvir contando</button><span class="count" id="count" aria-live="polite"></span></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-ded">
+    <h2 id="t-ded">Dedilhado: números 1 a 5</h2>
+    <p>Os números perto das notas dizem <strong>qual dedo</strong> usar. É igual nas duas mãos: <strong>1 = polegar</strong> … <strong>5 = mindinho</strong>.</p>
+    <div class="hands hands-ded">
+      <div class="hand lh" id="h-lh"></div>
+      <div class="ded-btns" role="group" aria-label="Escolha um dedo">
+        <button class="opt" type="button" data-f="1">1</button><button class="opt" type="button" data-f="2">2</button><button class="opt" type="button" data-f="3">3</button><button class="opt" type="button" data-f="4">4</button><button class="opt" type="button" data-f="5">5</button>
+      </div>
+      <div class="hand rh" id="h-rh"></div>
+    </div>
+    <p class="ded-name" id="ded-name" aria-live="polite">Toque num número.</p>
+  </section>
+
+  <section class="card" aria-labelledby="t-quiz">
+    <h2 id="t-quiz">Qual é a nota?</h2>
+    <div class="quiz">
+      <div class="q" id="qq">Que nota é esta?</div>
+      <div class="vf quiz-staff" id="vf-quiz"></div>
+      <div class="opts" id="q-opts"></div>
+      <div class="fb" id="q-fb" aria-live="polite"></div>
+      <div class="btn-row" style="justify-content:center;margin-top:6px"><button class="play alt" type="button" id="q-next">Próxima nota</button><span class="count" id="q-score"></span></div>
+    </div>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="aula-03-as-notas-no-piano.html"><small>‹ Aula anterior</small><b>3 · As notas no piano</b></a>
+    <a class="nav-next" href="aula-05-escala-do-maior.html"><small>Próxima aula ›</small><b>5 · Escala de Dó maior</b></a>
+  </nav>
+</main>
+
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 4</footer>
+<script src="../assets/js/vendor/vexflow-bravura.js"></script>
+<script src="../assets/js/piano.js"></script>
+<script src="../assets/js/lessons-common.js"></script>
+<script src="../assets/js/aula-04-notacao.js"></script>
+</body>
+</html>

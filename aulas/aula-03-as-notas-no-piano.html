@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 3 · As notas no piano — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub" data-site="tagline">Site de aulas de música: teoria e prática de piano popular</span></span>
+    </a>
+    <a class="header-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="lesson-title">
+    <span class="kicker">Aula 3</span>
+    <h1>As notas no piano</h1>
+    <p>Vamos achar cada nota no teclado. Toque nas teclas para ouvir!</p>
+  </div>
+
+  <section class="card" aria-labelledby="t-kb">
+    <h2 id="t-kb">Teclado</h2>
+    <div class="toggles" role="group" aria-label="O que mostrar no teclado">
+      <button class="toggle" type="button" data-t="names" aria-pressed="false">Mostrar nomes</button>
+      <button class="toggle" type="button" data-t="groups" aria-pressed="false">Grupos de pretas</button>
+      <button class="toggle" type="button" data-t="dos" aria-pressed="false">Todos os Dós</button>
+      <button class="toggle" type="button" data-t="central" aria-pressed="false">Dó central</button>
+    </div>
+    <div class="key-info" aria-live="polite"><div class="name" id="ki-name">Toque numa tecla</div><div class="sub" id="ki-sub">para ouvir e ver o nome</div></div>
+    <div id="kb"></div>
+    <div class="legend-chips" id="kb-legend" hidden>
+      <span><i class="sw" style="background:#2A9D8F"></i>grupo de 2 pretas</span>
+      <span><i class="sw" style="background:#C9A227"></i>grupo de 3 pretas</span>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="t-pad">
+    <h2 id="t-pad">Como achar o Dó</h2>
+    <p>As teclas pretas vêm em <strong>grupos de 2</strong> e <strong>grupos de 3</strong>. Esse desenho se repete no teclado todo.</p>
+    <ol class="steps-list">
+      <li>Ache um <strong>grupo de 2 pretas</strong>.</li>
+      <li>A branca logo <strong>à esquerda</strong> dele é o <strong>Dó</strong>.</li>
+      <li>Siga para a direita: Dó, Ré, Mi, Fá, Sol, Lá, Si… e o Dó de novo.</li>
+    </ol>
+  </section>
+
+  <section class="card" aria-labelledby="t-pretas">
+    <h2 id="t-pretas">As teclas pretas</h2>
+    <p>Cada tecla preta tem <strong>dois nomes</strong>: o sustenido (♯) da branca à esquerda ou o bemol (♭) da branca à direita.</p>
+    <table class="notes-table">
+      <tr><th>Dó♯ Ré♭</th><th>Ré♯ Mi♭</th><th>Fá♯ Sol♭</th><th>Sol♯ Lá♭</th><th>Lá♯ Si♭</th></tr>
+      <tr><td>C♯ D♭</td><td>D♯ E♭</td><td>F♯ G♭</td><td>G♯ A♭</td><td>A♯ B♭</td></tr>
+    </table>
+    <p>Entre <strong>Mi–Fá</strong> e <strong>Si–Dó</strong> não há tecla preta.</p>
+  </section>
+
+  <section class="card" aria-labelledby="t-central">
+    <h2 id="t-central">Dó central</h2>
+    <p>É o Dó do <strong>meio do piano</strong> (cifra <strong>C4</strong>), normalmente embaixo da marca do teclado. É o ponto de partida das duas mãos.</p>
+    <div class="btn-row"><button class="play" type="button" id="btn-central">Mostrar o Dó central</button></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-desafio">
+    <h2 id="t-desafio">Desafio: Encontre o Dó</h2>
+    <div class="quiz">
+      <div class="q" id="dq">Toque nos 3 Dós do teclado.</div>
+      <div id="kb-quiz"></div>
+      <div class="fb" id="dfb" aria-live="polite"></div>
+      <div class="btn-row" style="justify-content:center"><button class="play alt" type="button" id="btn-restart">Recomeçar</button></div>
+    </div>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="aula-02-as-notas-musicais.html"><small>‹ Aula anterior</small><b>2 · As notas musicais</b></a>
+    <a class="nav-next" href="aula-04-notacao-musical.html"><small>Próxima aula ›</small><b>4 · Notação musical</b></a>
+  </nav>
+</main>
+
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 3</footer>
+<script src="../assets/js/piano.js"></script>
+<script src="../assets/js/lessons-common.js"></script>
+<script src="../assets/js/aula-03-piano.js"></script>
+</body>
+</html>

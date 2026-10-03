@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 5 · Escala de Dó maior — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub" data-site="tagline">Site de aulas de música: teoria e prática de piano popular</span></span>
+    </a>
+    <a class="header-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="lesson-title">
+    <span class="kicker">Aula 5</span>
+    <h1>Escala de Dó maior</h1>
+    <p>Ouça, veja e toque: partitura, teclado e dedilhado juntos.</p>
+  </div>
+
+  <section class="card" aria-labelledby="t-partitura">
+    <h2 id="t-partitura">Partitura</h2>
+    <div id="score" role="img" aria-label="Partitura da escala de Dó maior em pauta dupla: clave de Sol, Dó4 a Dó5 subindo e descendo; clave de Fá, Dó3 a Dó4 subindo e descendo, com dedilhado."></div>
+    <div class="legend">
+      <span><i class="dot rh"></i>Clave de Sol · Mão direita (dedos em cima)</span>
+      <span><i class="dot lh"></i>Clave de Fá · Mão esquerda (dedos embaixo)</span>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="t-teclado">
+    <h2 id="t-teclado">Teclado</h2>
+    <div class="hands">
+      <div class="hand lh" id="hand-lh"></div>
+      <div class="now" aria-live="polite">
+        <div class="now-note" id="now-note">Dó</div>
+        <div class="now-detail" id="now-detail">Posição inicial</div>
+      </div>
+      <div class="hand rh" id="hand-rh"></div>
+    </div>
+    <div id="keyboard"></div>
+  </section>
+
+  <div class="transport">
+    <button class="btn btn-play" id="btn-play" type="button">▶ Tocar</button>
+    <button class="btn btn-loop" id="btn-loop" type="button" aria-pressed="false">🔁 Repetir</button>
+  </div>
+
+  <section class="card" aria-labelledby="t-controles">
+    <h2 id="t-controles">Como praticar</h2>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Escolha a mão">
+        <button class="btn rh" type="button" data-mode="rh" aria-pressed="true">Mão direita</button>
+        <button class="btn lh" type="button" data-mode="lh" aria-pressed="false">Mão esquerda</button>
+        <button class="btn both" type="button" data-mode="both" aria-pressed="false">Duas mãos juntas</button>
+      </div>
+      <div class="tempo">
+        <div class="tempo-head">
+          <label for="tempo">Andamento</label>
+          <output id="tempo-out" for="tempo">Médio · 90 bpm</output>
+        </div>
+        <input type="range" id="tempo" min="0" max="2" step="1" value="1" aria-describedby="tempo-out">
+        <div class="tempo-marks" aria-hidden="true"><span>Lento</span><span>Médio</span><span>Rápido</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card theory" aria-labelledby="t-teoria">
+    <h2 id="t-teoria">Teoria rápida</h2>
+    <p><strong>Fórmula da escala maior:</strong></p>
+    <div class="formula">
+      <span class="chip t">Tom</span><span class="chip t">Tom</span><span class="chip s">Semitom</span><span class="chip t">Tom</span><span class="chip t">Tom</span><span class="chip t">Tom</span><span class="chip s">Semitom</span>
+    </div>
+    <table class="notes-table">
+      <tr><th>Dó</th><th>Ré</th><th>Mi</th><th>Fá</th><th>Sol</th><th>Lá</th><th>Si</th><th>Dó</th></tr>
+      <tr><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B</td><td>C</td></tr>
+    </table>
+    <p>Só teclas brancas: os semitons ficam entre <strong>Mi–Fá</strong> e <strong>Si–Dó</strong>.</p>
+    <div class="tip"><strong>Dica do polegar:</strong> na mão direita, subindo, depois do Mi (dedo 3) passe o polegar <em>por baixo</em> para tocar o Fá. Descendo, cruze o dedo 3 <em>por cima</em> do polegar para o Mi. Na mão esquerda é o espelho: subindo, o 3 cruza por cima depois do Sol; descendo, o polegar passa por baixo depois do Lá.</div>
+  </section>
+
+  <section class="card" aria-labelledby="t-video">
+    <h2 id="t-video">Vídeo da aula</h2>
+    <video class="lesson-video" controls preload="none" playsinline poster="../assets/img/aula5_poster.jpg" src="../aula5_escala_do_maior.mp4">
+      Seu navegador não conseguiu abrir o vídeo. <a href="../aula5_escala_do_maior.mp4">Baixar o vídeo</a>.
+    </video>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="aula-04-notacao-musical.html"><small>‹ Aula anterior</small><b>4 · Notação musical</b></a>
+    <span class="nav-next disabled"><small>Próxima aula ›</small><b>Em breve</b></span>
+  </nav>
+</main>
+
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 5</footer>
+
+<script src="../assets/js/vendor/vexflow-bravura.js"></script>
+<script src="../assets/js/piano.js"></script>
+<script src="../assets/js/aula-05-escala.js"></script>
+</body>
+</html>

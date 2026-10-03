@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 2 · As notas musicais — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/site.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub" data-site="tagline">Site de aulas de música: teoria e prática de piano popular</span></span>
+    </a>
+    <a class="header-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="lesson-title">
+    <span class="kicker">Aula 2</span>
+    <h1>As notas musicais</h1>
+    <p>São só 7 notas! Com elas se faz qualquer música.</p>
+  </div>
+
+  <section class="card" aria-labelledby="t-7">
+    <h2 id="t-7">As 7 notas</h2>
+    <p>Toque em cada nota para ouvir. Em cima, o nome; embaixo, a <strong>cifra</strong> (letra).</p>
+    <div class="note-row" id="chips"><button class="note-chip" type="button" data-i="0"><b>Dó</b><span>C</span></button><button class="note-chip" type="button" data-i="1"><b>Ré</b><span>D</span></button><button class="note-chip" type="button" data-i="2"><b>Mi</b><span>E</span></button><button class="note-chip" type="button" data-i="3"><b>Fá</b><span>F</span></button><button class="note-chip" type="button" data-i="4"><b>Sol</b><span>G</span></button><button class="note-chip" type="button" data-i="5"><b>Lá</b><span>A</span></button><button class="note-chip" type="button" data-i="6"><b>Si</b><span>B</span></button></div>
+    <div class="btn-row"><button class="play" type="button" data-sound="sete">Ouvir as 7 notas</button></div>
+  </section>
+
+  <section class="card" aria-labelledby="t-cifra">
+    <h2 id="t-cifra">Cifra: as notas em letras</h2>
+    <p>Na música popular, as notas aparecem como letras, em cima da letra da música.</p>
+    <table class="notes-table">
+      <tr><th>Dó</th><th>Ré</th><th>Mi</th><th>Fá</th><th>Sol</th><th>Lá</th><th>Si</th></tr>
+      <tr><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>A</td><td>B</td></tr>
+    </table>
+    <div class="callout"><strong>Dica:</strong> comece pelo <strong>Lá = A</strong> e siga o alfabeto: A, B, C, D, E, F, G.</div>
+  </section>
+
+  <section class="card" aria-labelledby="t-oit">
+    <h2 id="t-oit">As notas se repetem</h2>
+    <p>Depois do <strong>Si</strong>, volta o <strong>Dó</strong>, só que mais agudo. De um Dó até o próximo Dó temos uma <strong>oitava</strong>.</p>
+    <div class="octave-strip" id="strip" aria-label="Duas oitavas de notas, com os Dós destacados"><span class="c">Dó</span><span class="">Ré</span><span class="">Mi</span><span class="">Fá</span><span class="">Sol</span><span class="">Lá</span><span class="">Si</span><span class="c">Dó</span><span class="">Ré</span><span class="">Mi</span><span class="">Fá</span><span class="">Sol</span><span class="">Lá</span><span class="">Si</span><span class="c">Dó</span></div>
+    <div class="btn-row">
+      <button class="play" type="button" data-sound="tresDos">Ouvir 3 Dós</button>
+      <button class="play alt" type="button" data-sound="duasOitavas">Subir 2 oitavas</button>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="t-acid">
+    <h2 id="t-acid">Sustenido e bemol</h2>
+    <div class="symbols">
+      <div class="symbol"><div class="s">♯</div><b>Sustenido</b><small>sobe meio tom</small></div>
+      <div class="symbol"><div class="s">♭</div><b>Bemol</b><small>desce meio tom</small></div>
+    </div>
+    <p><strong>Meio tom</strong> é a menor distância entre duas notas no piano: a tecla <em>vizinha</em>. Por isso <strong>Dó♯</strong> e <strong>Ré♭</strong> são a mesma tecla preta.</p>
+    <div class="btn-row">
+      <button class="play alt" type="button" data-sound="do">Dó</button>
+      <button class="play" type="button" data-sound="dos">Dó♯ = Ré♭</button>
+      <button class="play alt" type="button" data-sound="re">Ré</button>
+    </div>
+    <p class="callout" style="margin-top:10px">O <strong>♯</strong> é o símbolo da nossa escola: <span data-site="brand">Sustenido Music</span>!</p>
+  </section>
+
+  <section class="card" aria-labelledby="t-quiz">
+    <h2 id="t-quiz">Teste rápido</h2>
+    <div class="quiz" id="quiz">
+      <div class="q" id="quiz-q"></div>
+      <div class="opts" id="quiz-opts"></div>
+      <div class="fb" id="quiz-fb" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="aula-01-o-que-e-musica.html"><small>‹ Aula anterior</small><b>1 · O que é música</b></a>
+    <a class="nav-next" href="aula-03-as-notas-no-piano.html"><small>Próxima aula ›</small><b>3 · As notas no piano</b></a>
+  </nav>
+</main>
+
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 2</footer>
+<script src="../assets/js/piano.js"></script>
+<script src="../assets/js/lessons-common.js"></script>
+<script src="../assets/js/aula-02-notas.js"></script>
+</body>
+</html>
