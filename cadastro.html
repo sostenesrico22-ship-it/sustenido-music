@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1F2A44"><link rel="icon" href="assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/css/site2.css">
+<title>Cadastro de aluno — Sustenido Music</title></head><body>
+<header class="top"><div class="wrap"><a class="logo" href="index.html?s=1"><img src="assets/img/logo.svg" alt="">Sustenido <span>Music</span></a></div></header><nav class="tabs"><a href="index.html?s=1#curso">Sobre o curso</a><a href="index.html?s=1#aulas-online">Aulas online marcadas</a><a href="index.html?s=1#suporte">Suporte do professor</a><a href="index.html?s=1#professor">Sobre o professor</a><a href="cadastro.html?s=1">Cadastro</a><a href="acesso.html?s=1">Área do aluno</a></nav>
+<section class="blk"><div class="wrap" style="max-width:620px"><h2>Cadastro de aluno</h2><p>Preencha seus dados pra fazer parte da Sustenido Music. Ao enviar, seus dados vão pro WhatsApp do professor e em seguida você vai pra página do curso.</p>
+<form id="f" novalidate>
+<label>Nome completo<input name="nome" required autocomplete="name"></label>
+<label>WhatsApp (com DDD)<input name="whatsapp" required inputmode="tel" placeholder="(73) 99999-9999" autocomplete="tel"></label>
+<label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+<label>Idade<input name="idade" type="number" min="5" max="110" required></label>
+<label>Cidade<input name="cidade" required placeholder="Ilhéus-BA"></label>
+<label>Nível no teclado<select name="nivel" required><option value="">Selecione…</option><option>Nunca toquei</option><option>Básico</option><option>Intermediário</option></select></label>
+<label>Seu objetivo<textarea name="objetivo" rows="3" required placeholder="Ex.: tocar no louvor da igreja"></textarea></label>
+<p class="err" id="err" hidden>Preencha todos os campos, por favor.</p>
+<button class="btn gold" type="submit">Enviar cadastro</button>
+<p class="note">Seus dados são usados só pra contato sobre as aulas.</p>
+</form></div></section>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var f=e.target,d={},ok=true;
+['nome','whatsapp','email','idade','cidade','nivel','objetivo'].forEach(function(k){d[k]=f[k].value.trim();if(!d[k])ok=false;});
+if(!ok||!f.email.checkValidity()){document.getElementById('err').hidden=false;return;}
+var t='*Novo cadastro - Sustenido Music*\nNome: '+d.nome+'\nWhatsApp: '+d.whatsapp+'\nE-mail: '+d.email+'\nIdade: '+d.idade+'\nCidade: '+d.cidade+'\nNível: '+d.nivel+'\nObjetivo: '+d.objetivo;
+try{localStorage.setItem('sm_nome',d.nome.split(' ')[0]);}catch(x){}
+window.open('https://wa.me/5573981024409?text='+encodeURIComponent(t),'_blank');
+location.href='obrigado.html?s=1';});
+</script>
+<footer>© 2026 Sustenido Music · Prof. Sóstenes Silva · Ilhéus-BA<br>Informações: <a href="https://wa.me/5573981024409">WhatsApp (73) 98102-4409</a></footer><a class="float-wa" href="https://wa.me/5573981024409?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Sustenido%20Music%20e%20quero%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a></body></html>
