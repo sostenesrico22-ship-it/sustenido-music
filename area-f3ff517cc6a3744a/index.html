@@ -32,69 +32,68 @@
 <main class="wrap">
   <!-- Para adicionar uma nova aula: copie um bloco <li>, troque o número, o título e o link
        (ex.: aulas/aula-06-....html) e mude o selo de "Em breve" para "Disponível". -->
-  <h2 class="section-title">Aulas</h2>
+  <h2 class="section-title">Nível Básico</h2>
   <ul class="lessons">
     <li>
-      <a class="lesson" href="aulas/aula-01-o-que-e-musica.html">
+      <a class="lesson" href="aulas/aula-01-o-que-e-musica.html" data-aula="1">
         <div class="num"><small>AULA</small><b>1</b></div>
         <div>
           <h3>O que é música</h3>
           <p>Som e silêncio, melodia, harmonia e ritmo.</p>
-          <span class="badge ok">Disponível</span>
+          <span class="badge ok">Disponível</span><span class="prog todo">● Pendente</span>
         </div>
         <span class="go" aria-hidden="true">›</span>
       </a>
     </li>
     <li>
-      <a class="lesson" href="aulas/aula-02-as-notas-musicais.html">
+      <a class="lesson" href="aulas/aula-02-as-notas-musicais.html" data-aula="2">
         <div class="num"><small>AULA</small><b>2</b></div>
         <div>
           <h3>As notas musicais</h3>
           <p>Dó, Ré, Mi… a cifra, as oitavas, ♯ e ♭.</p>
-          <span class="badge ok">Disponível</span>
+          <span class="badge ok">Disponível</span><span class="prog todo">● Pendente</span>
         </div>
         <span class="go" aria-hidden="true">›</span>
       </a>
     </li>
     <li>
-      <a class="lesson" href="aulas/aula-03-as-notas-no-piano.html">
+      <a class="lesson" href="aulas/aula-03-as-notas-no-piano.html" data-aula="3">
         <div class="num"><small>AULA</small><b>3</b></div>
         <div>
           <h3>As notas no piano</h3>
           <p>Ache o Dó e todas as teclas. Com desafio!</p>
-          <span class="badge ok">Disponível</span>
+          <span class="badge ok">Disponível</span><span class="prog todo">● Pendente</span>
         </div>
         <span class="go" aria-hidden="true">›</span>
       </a>
     </li>
     <li>
-      <a class="lesson" href="aulas/aula-04-notacao-musical.html">
+      <a class="lesson" href="aulas/aula-04-notacao-musical.html" data-aula="4">
         <div class="num"><small>AULA</small><b>4</b></div>
         <div>
           <h3>Notação musical</h3>
           <p>Como ler a partitura: pauta, claves, figuras e compasso.</p>
-          <span class="badge ok">Disponível</span>
+          <span class="badge ok">Disponível</span><span class="prog todo">● Pendente</span>
         </div>
         <span class="go" aria-hidden="true">›</span>
       </a>
     </li>
     <li>
-      <a class="lesson" href="aulas/aula-05-escala-do-maior.html">
+      <a class="lesson" href="aulas/aula-05-escala-do-maior.html" data-aula="5">
         <div class="num"><small>AULA</small><b>5</b></div>
         <div>
           <h3>Escala de Dó maior</h3>
           <p>Mão direita, mão esquerda e mãos juntas, com dedilhado.</p>
-          <span class="badge ok">Disponível</span>
+          <span class="badge ok">Disponível</span><span class="prog todo">● Pendente</span>
         </div>
         <span class="go" aria-hidden="true">›</span>
       </a>
     </li>
-      <li>
-      <div class="lesson locked" aria-disabled="true">
-        <div class="num"><small>AULA</small><b>6</b></div>
-        <div><h3>🔒 Aula 6 – Em breve</h3><p>Nível Intermediário · conteúdo em preparação.</p><span class="badge soon">Em breve</span></div>
-      </div>
-    </li>
+    <li id="item-prova"><div class="lesson locked"><div class="num exam"><small>PROVA</small><b>🔒</b></div><div><h3>🔒 Prova do Básico</h3><p>Conclua as aulas 1 a 5 para liberar a prova.</p></div></div></li>
+  </ul>
+  <h2 class="section-title">Nível Intermediário</h2>
+  <ul class="lessons">
+    <li id="item-aula6"><div class="lesson locked"><div class="num"><small>AULA</small><b>6</b></div><div><h3>🔒 Escalas maiores com sustenidos e o círculo das quintas</h3><p>Nível Intermediário</p></div></div></li>
     <li>
       <div class="lesson locked" aria-disabled="true">
         <div class="num"><small>AULA</small><b>7</b></div>
@@ -123,5 +122,6 @@
 </main>
 
 <footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span></footer>
+<script src="../assets/js/progresso.js"></script>
 </body>
 </html>
