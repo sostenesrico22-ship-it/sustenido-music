@@ -33,3 +33,21 @@ input,select,textarea{font:inherit;padding:12px;border:1.5px solid #cfd5e2;borde
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px #c9a22733}
 .note{font-size:.85rem;color:#5b6377}.err{color:#b3261e;font-weight:700}
 @media(min-width:760px){.hero .wrap{grid-template-columns:1.1fr .9fr}.hero h1{font-size:2.5rem}.cards{grid-template-columns:repeat(3,1fr)}.cards.two{grid-template-columns:repeat(2,1fr)}}
+
+/* Conteúdo do curso (mesmo estilo da área do aluno) */
+.lessons{--line:#e3ddcc;--muted:#5b6275;--radius:14px;--shadow:0 2px 8px #0001;--text:var(--ink)}
+.lessons{list-style:none;padding:0;margin:16px 0;display:grid;gap:10px}
+@media(min-width:700px){.lessons{grid-template-columns:repeat(2,1fr)}}
+.lesson{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:12px;box-shadow:var(--shadow);text-decoration:none;color:var(--text)}
+.lesson .num{flex:0 0 52px;height:52px;border-radius:12px;background:var(--navy);color:var(--gold);display:flex;
+  flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1}
+.lesson .num small{font-size:.6rem;color:#C8CEDD;letter-spacing:.5px;margin-bottom:2px}
+.lesson .num b{font-size:1.3rem}
+.lesson h3{margin:0;font-size:1rem}
+.lesson p{margin:2px 0 0;font-size:.82rem;color:var(--muted)}
+.badge{display:inline-block;font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:2px 8px;border-radius:999px;margin-top:4px}
+.badge.ok{background:var(--gold);color:var(--navy)}
+.badge.soon{background:var(--line);color:var(--muted)}
+.lesson.locked{opacity:.65;box-shadow:none;border-style:dashed}
+.lesson.locked .num{background:#9AA3B8;color:#fff}
