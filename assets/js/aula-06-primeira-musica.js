@@ -86,7 +86,7 @@
     kb.releaseAll();
     var ev = EV[st.curEv], mi = st.curM;
     if (mi < 0 || !ev) { sc.rect && sc.rect.setAttribute('visibility', 'hidden'); return; }
-    var ch = CH[MEASURES[mi][0]] || { notes: [], info: 'Anacruse: a melodia começa sozinha' };
+    var ch = CH[MEASURES[mi][0]] || { notes: [], info: '' };
     if (st.mode !== 'rh' && sc.lh[mi]) { ch.notes.forEach(function (n) { kb.press(n, 'lh'); }); if (sc.lh[mi]) sc.lh[mi].classList.add('hl-lh'); }
     if (st.mode !== 'lh' && ev.midi) { kb.press(ev.midi, 'rh'); var e = sc.rh[mi][ev.ni]; if (e) e.classList.add('hl-rh'); }
     var ys = sc.sysY[sc.sysOf[mi]], mx = sc.mx[mi];
@@ -161,12 +161,4 @@
     ['C', [[72, 2], [71, 2]]], ['Am', [[69, 2], [67, 2]]], ['Dm', [[65, 2], [64, 2]]], ['G', [[62, 4]]],
     ['C', [[60, 4]]]
   ], 4, 47, 72);
-  // Parabéns pra você (3/4, começa com anacruse)
-  setup('pb', CMAJ, [
-    [null, [[null, 2], [67, 0.5], [67, 0.5]]],
-    ['C', [[69, 1], [67, 1], [72, 1]]], ['G', [[71, 2], [67, 0.5], [67, 0.5]]],
-    ['G', [[69, 1], [67, 1], [74, 1]]], ['C', [[72, 2], [67, 0.5], [67, 0.5]]],
-    ['C', [[79, 1], [76, 1], [72, 1]]], ['F', [[71, 1], [69, 1], [77, 0.5], [77, 0.5]]],
-    ['C', [[76, 1], [72, 1], [74, 1]]], ['C', [[72, 3]]]
-  ], 3, 47, 79);
 })();

@@ -15,8 +15,7 @@
     ['Ouça e veja: Dó – Fá – Lá. Que acorde é, e em qual posição?', ['F na 2ª inversão', 'Dm no estado fundamental', 'C na 1ª inversão'], 0, [60, 65, 69]],
     ['A 1ª inversão começa em qual nota do acorde?', ['Tônica', 'Terça', 'Quinta'], 1],
     ['Para que servem as inversões?', ['Para deixar a música mais rápida', 'Para facilitar e economizar movimento na troca de acordes', 'Para mudar o tom da música'], 1],
-    ['No campo harmônico de Dó maior, qual é o acorde do 5º grau?', ['G', 'Em', 'Bdim'], 0],
-    ['Em Parabéns pra você, que acorde usamos com Dó – Fá – Lá?', ['F (Fá maior)', 'Dm', 'Am'], 0]
+    ['No campo harmônico de Dó maior, qual é o acorde do 5º grau?', ['G', 'Em', 'Bdim'], 0]
   ];
   var right = 0, done = 0;
   Q.forEach(function (q, qi) {
