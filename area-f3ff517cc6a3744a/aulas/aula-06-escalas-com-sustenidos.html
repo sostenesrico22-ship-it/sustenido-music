@@ -33,7 +33,7 @@
   <div class="lesson-title">
     <span class="kicker">Aula 6 · Nível Intermediário</span>
     <h1>Escalas maiores com sustenidos e o círculo das quintas</h1>
-    <p>A mesma fórmula da escala de Dó, começando em outras notas.</p>
+    <p>A mesma fórmula da escala de Dó, começando em outras notas. E, no final, as inversões de acordes.</p>
   </div>
 
   <section class="card">
@@ -78,6 +78,62 @@
     </ul>
   </section>
 
+  <section class="card" id="inversoes">
+    <h2>🎹 Inversões de acordes</h2>
+    <p>Agora vamos usar o que você já sabe de escala para montar <b>acordes</b>. O acorde mais simples é a <b>tríade</b>: três notas tocadas juntas.</p>
+    <p>Em Dó maior, pegamos a 1ª, a 3ª e a 5ª nota da escala:</p>
+    <div class="formula"><span class="chip inv-t">T · Tônica: Dó</span><span class="chip inv-3">3ª · Terça: Mi</span><span class="chip inv-5">5ª · Quinta: Sol</span></div>
+    <p>As notas são sempre as mesmas, mas podemos mudar <b>qual delas fica embaixo</b> (a mais grave). Cada jeito é uma <b>posição</b> do acorde:</p>
+    <ul>
+      <li><b>Estado fundamental:</b> começa na <b>tônica</b> → <b>Dó – Mi – Sol</b></li>
+      <li><b>1ª inversão:</b> começa na <b>terça</b> → <b>Mi – Sol – Dó</b></li>
+      <li><b>2ª inversão:</b> começa na <b>quinta</b> → <b>Sol – Dó – Mi</b></li>
+    </ul>
+    <div class="tip"><b>Por que isso ajuda?</b> Com as inversões, a mão quase não pula no teclado. Ao trocar de um acorde para outro, você mexe só um ou dois dedos e mantém as notas em comum no lugar. A troca fica mais rápida, mais fácil e soa mais bonita (mais "lisa").</div>
+
+    <h3>Experimente no teclado</h3>
+    <p>Escolha o acorde e a posição. As cores mostram a função de cada nota: <span class="chip inv-t">T</span> tônica, <span class="chip inv-3">3ª</span> terça, <span class="chip inv-5">5ª</span> quinta.</p>
+    <div class="btn-row seg inv-row" role="group" aria-label="Acorde">
+      <button class="btn" type="button" data-chord="C" aria-pressed="true">Dó (C)</button>
+      <button class="btn" type="button" data-chord="F" aria-pressed="false">Fá (F)</button>
+      <button class="btn" type="button" data-chord="G" aria-pressed="false">Sol (G)</button>
+    </div>
+    <div class="btn-row seg inv-row" role="group" aria-label="Posição">
+      <button class="btn" type="button" data-inv="0" aria-pressed="true">Fundamental</button>
+      <button class="btn" type="button" data-inv="1" aria-pressed="false">1ª inversão</button>
+      <button class="btn" type="button" data-inv="2" aria-pressed="false">2ª inversão</button>
+    </div>
+    <div id="kb-inv" class="kb-inv"></div>
+    <p id="inv-info" class="inv-info" aria-live="polite"></p>
+    <div class="btn-row inv-row">
+      <button class="btn btn-play" type="button" id="inv-play">▶ Tocar acorde</button>
+      <button class="btn" type="button" id="inv-arp">🎵 Nota por nota</button>
+    </div>
+
+    <h3>Mais exemplos</h3>
+    <div class="table-scroll"><table class="scale-table">
+      <tr><th style="text-align:left">Acorde</th><th>Fundamental</th><th>1ª inversão</th><th>2ª inversão</th></tr>
+      <tr><th style="text-align:left">Dó maior (C)</th><td>Dó – Mi – Sol</td><td>Mi – Sol – Dó</td><td>Sol – Dó – Mi</td></tr>
+      <tr><th style="text-align:left">Fá maior (F)</th><td>Fá – Lá – Dó</td><td>Lá – Dó – Fá</td><td>Dó – Fá – Lá</td></tr>
+      <tr><th style="text-align:left">Sol maior (G)</th><td>Sol – Si – Ré</td><td>Si – Ré – Sol</td><td>Ré – Sol – Si</td></tr>
+    </table></div>
+    <div class="tip"><b>Na prática:</b> toque Dó (Dó–Mi–Sol), depois Fá na 2ª inversão (Dó–Fá–Lá) e Sol na 1ª inversão (Si–Ré–Sol). Veja como a mão fica quase parada!</div>
+
+    <h3>Exercício: qual é a posição?</h3>
+    <div class="quiz">
+      <div id="kb-quiz" class="kb-inv"></div>
+      <div class="q" id="quiz-q"></div>
+      <div class="opts" id="quiz-opts">
+        <button type="button" class="opt" data-resp="0">Fundamental</button>
+        <button type="button" class="opt" data-resp="1">1ª inversão</button>
+        <button type="button" class="opt" data-resp="2">2ª inversão</button>
+      </div>
+      <div class="fb" id="quiz-fb" aria-live="polite"></div>
+      <div class="btn-row inv-row"><button class="btn" type="button" id="quiz-ouvir">🔊 Ouvir</button><button class="btn btn-play" type="button" id="quiz-next">Próximo acorde ›</button></div>
+      <small id="quiz-score"></small>
+    </div>
+  </section>
+
   <section class="card exercise">
     <h2>✍️ Exercícios práticos</h2>
     <ol>
@@ -86,6 +142,7 @@
       <li>Toque a escala de <b>Sol maior</b> com a mão direita, subindo e descendo, 5 vezes. Depois faça o mesmo com <b>Ré maior</b>.</li>
       <li>Toque Lá maior e Mi maior com a mão direita; depois tente a mão esquerda.</li>
       <li>Descubra o tom pela armadura: (a) Fá♯ e Dó♯; (b) Fá♯, Dó♯, Sol♯, Ré♯; (c) Fá♯, Dó♯, Sol♯, Ré♯, Lá♯, Mi♯.</li>
+      <li>Toque Dó, Fá e Sol maior nas três posições (fundamental, 1ª e 2ª inversão), falando o nome das notas.</li>
       <li>Escreva no caderno as notas de Si maior sem olhar a tabela, usando a fórmula T T S T T T S. Depois confira.</li>
     </ol>
     <details><summary><b>Ver respostas do exercício 5</b></summary><p>(a) Ré maior · (b) Mi maior · (c) Fá♯ maior.</p></details>
@@ -103,8 +160,10 @@
 </div>
 </main>
 <footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 6</footer>
+<script src="../../assets/js/piano.js"></script>
 <script>
 (function(){var ok=window.SMProgresso.provaAprovada();document.getElementById(ok?'conteudo':'trancada').hidden=false;})();
 </script>
+<script src="../../assets/js/aula-06-inversoes.js"></script>
 </body>
 </html>

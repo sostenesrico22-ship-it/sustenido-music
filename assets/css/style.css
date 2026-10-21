@@ -265,3 +265,7 @@ a.lesson:hover{border-color:var(--gold)}
 .scale-table th{background:var(--navy);color:#fff}.scale-table td.sh{background:var(--gold-soft);font-weight:800}
 .table-scroll{overflow-x:auto}
 .formula{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:4px 0 10px}
+/* Aula 6 · inversões */
+.chip.inv-t{background:#C62828;color:#fff}.chip.inv-3{background:#2A9D8F;color:#fff}.chip.inv-5{background:#C9A227;color:#1F2A44}
+.kb-inv{max-width:640px;margin:8px auto}.kb-inv svg{display:block;width:100%;height:auto;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.inv-row{justify-content:center;margin:6px 0}.inv-info{text-align:center;min-height:2.6em}
