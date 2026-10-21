@@ -21,14 +21,18 @@
     document.querySelectorAll('[data-aula]').forEach(function(el){
       var n=+el.getAttribute('data-aula'),s=el.querySelector('.prog');if(!s)return;
       var f=P.feita(n);s.className='prog '+(f?'done':'todo');s.textContent=f?'✓ Concluída':'● Pendente';});
-    var pv=document.getElementById('item-prova'),a6=document.getElementById('item-aula6');
+    var pv=document.getElementById('item-prova'),a6=document.getElementById('item-aula6'),a7=document.getElementById('item-aula7');
     if(pv){var ok=P.basicoCompleto(),ap=P.provaAprovada();
       pv.innerHTML=ok?'<a class="lesson" href="aulas/prova-do-basico.html"><div class="num exam"><small>PROVA</small><b>📝</b></div><div><h3>Prova do Básico</h3><p>10 questões sobre as aulas 1 a 5. Acerte 70% para liberar o Nível Intermediário.</p>'+(ap?'<span class="prog done">✓ Aprovado'+(P.nota()?' · '+P.nota()+'%':'')+'</span>':'<span class="badge ok">Liberada</span>')+'</div><span class="go" aria-hidden="true">›</span></a>'
         :'<div class="lesson locked" aria-disabled="true"><div class="num exam"><small>PROVA</small><b>🔒</b></div><div><h3>🔒 Prova do Básico</h3><p>Conclua as aulas 1 a 5 para liberar a prova.</p><span class="badge soon">Trancada</span></div></div>';}
     if(a6){var ap6=P.provaAprovada();
-      a6.innerHTML=ap6?'<a class="lesson" href="aulas/aula-06-escalas-com-sustenidos.html" data-aula="6"><div class="num"><small>AULA</small><b>6</b></div><div><h3>Escalas maiores com sustenidos e o círculo das quintas</h3><p>Nível Intermediário · Sol, Ré, Lá, Mi, Si, Fá♯ e Dó♯ maior.</p><span class="prog todo">● Pendente</span></div><span class="go" aria-hidden="true">›</span></a>'
-        :'<div class="lesson locked" aria-disabled="true"><div class="num"><small>AULA</small><b>6</b></div><div><h3>🔒 Escalas maiores com sustenidos e o círculo das quintas</h3><p>Nível Intermediário · libera quando você for aprovado na Prova do Básico.</p><span class="badge soon">Trancada</span></div></div>';
+      a6.innerHTML=ap6?'<a class="lesson" href="aulas/aula-06-acordes.html" data-aula="6"><div class="num"><small>AULA</small><b>6</b></div><div><h3>Acordes: campo harmônico, cifras e inversões</h3><p>Nível Intermediário · C Dm Em F G Am Bdim, cifras, tríades e inversões.</p><span class="prog todo">● Pendente</span></div><span class="go" aria-hidden="true">›</span></a>'
+        :'<div class="lesson locked" aria-disabled="true"><div class="num"><small>AULA</small><b>6</b></div><div><h3>🔒 Acordes: campo harmônico, cifras e inversões</h3><p>Nível Intermediário · libera quando você for aprovado na Prova do Básico.</p><span class="badge soon">Trancada</span></div></div>';
       if(ap6){var s=a6.querySelector('.prog');var f=P.feita(6);s.className='prog '+(f?'done':'todo');s.textContent=f?'✓ Concluída':'● Pendente';}}
+    if(a7){var ap7=P.provaAprovada();
+      a7.innerHTML=ap7?'<a class="lesson" href="aulas/aula-07-escalas-com-sustenidos.html" data-aula="7"><div class="num"><small>AULA</small><b>7</b></div><div><h3>Escalas maiores com sustenidos e o círculo das quintas</h3><p>Nível Intermediário · Sol, Ré, Lá, Mi, Si, Fá♯ e Dó♯ maior.</p><span class="prog todo">● Pendente</span></div><span class="go" aria-hidden="true">›</span></a>'
+        :'<div class="lesson locked" aria-disabled="true"><div class="num"><small>AULA</small><b>7</b></div><div><h3>🔒 Escalas maiores com sustenidos e o círculo das quintas</h3><p>Nível Intermediário · libera quando você for aprovado na Prova do Básico.</p><span class="badge soon">Trancada</span></div></div>';
+      if(ap7){var s=a7.querySelector('.prog');var f=P.feita(7);s.className='prog '+(f?'done':'todo');s.textContent=f?'✓ Concluída':'● Pendente';}}
   }
   document.addEventListener('DOMContentLoaded',function(){botao();lista()});
 })();

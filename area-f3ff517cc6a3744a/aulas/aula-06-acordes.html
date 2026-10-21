@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 6 · Acordes: campo harmônico, cifras e inversões — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script src="../../assets/js/site.js"></script>
+<script src="../../assets/js/progresso.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <span class="brand">
+      <img src="../../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub">Teclado Popular do Zero</span></span>
+    </span>
+    <a class="header-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="card lockbox" id="trancada" hidden>
+    <div class="big">🔒</div>
+    <h2 style="justify-content:center">Aula trancada</h2>
+    <p>A Aula 6 abre quando você for aprovado na <b>Prova do Básico</b>.</p>
+    <a class="btn" href="prova-do-basico.html">Ir para a prova</a> <a class="btn" href="../index.html">Lista de aulas</a>
+  </section>
+<div id="conteudo" hidden>
+  <div class="lesson-title">
+    <span class="kicker">Aula 6 · Nível Intermediário</span>
+    <h1>Acordes: campo harmônico, cifras e inversões</h1>
+    <p>Da escala de Dó maior (Aula 5) para os acordes: como eles nascem, como se escrevem e como tocar de jeitos diferentes.</p>
+  </div>
+
+  <section class="card" id="campo">
+    <h2>1. Campo harmônico de Dó maior</h2>
+    <p>Na Aula 5 você tocou a escala de Dó maior: <b>Dó, Ré, Mi, Fá, Sol, Lá, Si</b>. Agora vamos montar um acorde em <b>cada nota</b> dessa escala, usando só as notas dela (só teclas brancas).</p>
+    <p>O segredo é <b>pular uma nota</b>: toca uma, pula a próxima, toca a seguinte. Do Dó: <b>Dó</b> (pula Ré) <b>Mi</b> (pula Fá) <b>Sol</b>. Fazendo isso em cada nota, temos os 7 acordes do <b>campo harmônico</b>:</p>
+    <div class="table-scroll"><table class="scale-table">
+      <tr><th style="text-align:left">Grau</th><td>I</td><td>II</td><td>III</td><td>IV</td><td>V</td><td>VI</td><td>VII</td></tr>
+      <tr><th style="text-align:left">Cifra</th><td><b>C</b></td><td><b>Dm</b></td><td><b>Em</b></td><td><b>F</b></td><td><b>G</b></td><td><b>Am</b></td><td><b>Bdim</b></td></tr>
+      <tr><th style="text-align:left">Nome</th><td>Dó maior</td><td>Ré menor</td><td>Mi menor</td><td>Fá maior</td><td>Sol maior</td><td>Lá menor</td><td>Si diminuto</td></tr>
+      <tr><th style="text-align:left">Notas</th><td>Dó Mi Sol</td><td>Ré Fá Lá</td><td>Mi Sol Si</td><td>Fá Lá Dó</td><td>Sol Si Ré</td><td>Lá Dó Mi</td><td>Si Ré Fá</td></tr>
+    </table></div>
+    <p>Toque cada acorde e escute a diferença entre maior, menor e diminuto:</p>
+    <div class="btn-row seg inv-row" role="group" aria-label="Acordes do campo harmônico">
+      <button class="btn" type="button" data-campo="0" aria-pressed="true">C</button><button class="btn" type="button" data-campo="1" aria-pressed="false">Dm</button><button class="btn" type="button" data-campo="2" aria-pressed="false">Em</button><button class="btn" type="button" data-campo="3" aria-pressed="false">F</button><button class="btn" type="button" data-campo="4" aria-pressed="false">G</button><button class="btn" type="button" data-campo="5" aria-pressed="false">Am</button><button class="btn" type="button" data-campo="6" aria-pressed="false">Bdim</button>
+    </div>
+    <div id="kb-campo" class="kb-inv"></div>
+    <p id="campo-info" class="inv-info" aria-live="polite"></p>
+    <div class="tip"><b>Guarde a sequência:</b> maior, menor, menor, maior, maior, menor, diminuto. Ela vale para o campo harmônico de <b>qualquer</b> tom maior.</div>
+  </section>
+
+  <section class="card" id="cifras">
+    <h2>2. Leitura de cifras</h2>
+    <p>Na música popular, os acordes são escritos com <b>letras</b>: é a <b>cifra</b>. Cada letra é uma nota:</p>
+    <table class="notes-table">
+      <tr><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th></tr>
+      <tr><td>Lá</td><td>Si</td><td>Dó</td><td>Ré</td><td>Mi</td><td>Fá</td><td>Sol</td></tr>
+    </table>
+    <ul>
+      <li>Só a letra = acorde <b>maior</b>: <b>C</b> = Dó maior, <b>G</b> = Sol maior.</li>
+      <li>Letra + <b>m</b> = acorde <b>menor</b>: <b>Am</b> = Lá menor, <b>Dm</b> = Ré menor.</li>
+      <li><b>dim</b> (ou °) = acorde <b>diminuto</b>: <b>Bdim</b> = Si diminuto.</li>
+      <li><b>#</b> sobe meio tom e <b>b</b> desce meio tom: <b>F#</b> = Fá sustenido maior, <b>Bb</b> = Si bemol maior.</li>
+      <li>Número depois da letra acrescenta uma nota: <b>G7</b> = Sol com sétima (veremos depois).</li>
+    </ul>
+    <div class="tip"><b>Dica:</b> a sequência começa no Lá porque A é a primeira letra do alfabeto. Decore: <b>A Lá, B Si, C Dó, D Ré, E Mi, F Fá, G Sol</b>.</div>
+  </section>
+
+  <section class="card" id="triade">
+    <h2>3. O que é uma tríade</h2>
+    <p>Todos os acordes do campo harmônico têm <b>três notas</b>. Um acorde de três notas se chama <b>tríade</b>. Cada nota tem uma função:</p>
+    <div class="formula"><span class="chip inv-t">T · Tônica</span><span class="chip inv-3">3ª · Terça</span><span class="chip inv-5">5ª · Quinta</span></div>
+    <ul>
+      <li><b>Tônica (T):</b> a nota que dá o nome ao acorde. Em C, é o <b>Dó</b>.</li>
+      <li><b>Terça (3ª):</b> a nota que diz se o acorde é maior ou menor. Em C, é o <b>Mi</b>.</li>
+      <li><b>Quinta (5ª):</b> completa o acorde. Em C, é o <b>Sol</b>.</li>
+    </ul>
+    <p>Então o acorde de <b>Dó maior (C)</b> é <b>Dó – Mi – Sol</b>: tônica, terça e quinta.</p>
+  </section>
+
+  <section class="card" id="inversoes">
+    <h2>4. Inversões de acordes</h2>
+    <p>As notas da tríade são sempre as mesmas, mas podemos mudar <b>qual delas fica embaixo</b> (a mais grave). Cada jeito é uma <b>posição</b> do acorde:</p>
+    <ul>
+      <li><b>Estado fundamental:</b> começa na <b>tônica</b> → <b>Dó – Mi – Sol</b></li>
+      <li><b>1ª inversão:</b> começa na <b>terça</b> → <b>Mi – Sol – Dó</b></li>
+      <li><b>2ª inversão:</b> começa na <b>quinta</b> → <b>Sol – Dó – Mi</b></li>
+    </ul>
+    <div class="tip"><b>Por que isso ajuda?</b> Com as inversões, a mão quase não pula no teclado. Ao trocar de um acorde para outro, você mexe só um ou dois dedos e mantém as notas em comum no lugar. A troca fica mais rápida, mais fácil e soa mais bonita (mais "lisa").</div>
+
+    <h3>Experimente no teclado</h3>
+    <p>Escolha o acorde e a posição. As cores mostram a função de cada nota: <span class="chip inv-t">T</span> tônica, <span class="chip inv-3">3ª</span> terça, <span class="chip inv-5">5ª</span> quinta.</p>
+    <div class="btn-row seg inv-row" role="group" aria-label="Acorde">
+      <button class="btn" type="button" data-chord="C" aria-pressed="true">Dó (C)</button>
+      <button class="btn" type="button" data-chord="F" aria-pressed="false">Fá (F)</button>
+      <button class="btn" type="button" data-chord="G" aria-pressed="false">Sol (G)</button>
+    </div>
+    <div class="btn-row seg inv-row" role="group" aria-label="Posição">
+      <button class="btn" type="button" data-inv="0" aria-pressed="true">Fundamental</button>
+      <button class="btn" type="button" data-inv="1" aria-pressed="false">1ª inversão</button>
+      <button class="btn" type="button" data-inv="2" aria-pressed="false">2ª inversão</button>
+    </div>
+    <div id="kb-inv" class="kb-inv"></div>
+    <p id="inv-info" class="inv-info" aria-live="polite"></p>
+    <div class="btn-row inv-row">
+      <button class="btn btn-play" type="button" id="inv-play">▶ Tocar acorde</button>
+      <button class="btn" type="button" id="inv-arp">🎵 Nota por nota</button>
+    </div>
+
+    <h3>Mais exemplos</h3>
+    <div class="table-scroll"><table class="scale-table">
+      <tr><th style="text-align:left">Acorde</th><th>Fundamental</th><th>1ª inversão</th><th>2ª inversão</th></tr>
+      <tr><th style="text-align:left">Dó maior (C)</th><td>Dó – Mi – Sol</td><td>Mi – Sol – Dó</td><td>Sol – Dó – Mi</td></tr>
+      <tr><th style="text-align:left">Fá maior (F)</th><td>Fá – Lá – Dó</td><td>Lá – Dó – Fá</td><td>Dó – Fá – Lá</td></tr>
+      <tr><th style="text-align:left">Sol maior (G)</th><td>Sol – Si – Ré</td><td>Si – Ré – Sol</td><td>Ré – Sol – Si</td></tr>
+    </table></div>
+    <div class="tip"><b>Na prática:</b> toque Dó (Dó–Mi–Sol), depois Fá na 2ª inversão (Dó–Fá–Lá) e Sol na 1ª inversão (Si–Ré–Sol). Veja como a mão fica quase parada!</div>
+
+    <h3>Exercício: qual é a posição?</h3>
+    <div class="quiz">
+      <div id="kb-quiz" class="kb-inv"></div>
+      <div class="q" id="quiz-q"></div>
+      <div class="opts" id="quiz-opts">
+        <button type="button" class="opt" data-resp="0">Fundamental</button>
+        <button type="button" class="opt" data-resp="1">1ª inversão</button>
+        <button type="button" class="opt" data-resp="2">2ª inversão</button>
+      </div>
+      <div class="fb" id="quiz-fb" aria-live="polite"></div>
+      <div class="btn-row inv-row"><button class="btn" type="button" id="quiz-ouvir">🔊 Ouvir</button><button class="btn btn-play" type="button" id="quiz-next">Próximo acorde ›</button></div>
+      <small id="quiz-score"></small>
+    </div>
+  </section>
+
+  <section class="card exercise">
+    <h2>✍️ Exercícios práticos</h2>
+    <ol>
+      <li>Fale de cor o campo harmônico de Dó: C, Dm, Em, F, G, Am, Bdim.</li>
+      <li>Toque os 7 acordes do campo harmônico com a mão direita, subindo e descendo.</li>
+      <li>Leia as cifras e diga o nome: (a) Am; (b) G; (c) Em; (d) F#.</li>
+      <li>Toque Dó, Fá e Sol maior nas três posições (fundamental, 1ª e 2ª inversão), falando o nome das notas.</li>
+      <li>Toque a sequência C → F (2ª inversão) → G (1ª inversão) → C, mexendo a mão o mínimo possível.</li>
+    </ol>
+    <details><summary><b>Ver respostas do exercício 3</b></summary><p>(a) Lá menor · (b) Sol maior · (c) Mi menor · (d) Fá sustenido maior.</p></details>
+  </section>
+
+  <section class="card concluir">
+    <button type="button" class="btn-concluir" data-concluir="6" aria-pressed="false">Marcar como concluída</button>
+    <small data-concluir-hint>Fez os exercícios? Marque a aula como concluída.</small>
+  </section>
+
+  <nav class="lesson-nav" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="prova-do-basico.html"><small>‹ Etapa anterior</small><b>Prova do Básico</b></a>
+    <a class="nav-next" href="aula-07-escalas-com-sustenidos.html"><small>Próxima aula ›</small><b>7 · Escalas com sustenidos</b></a>
+  </nav>
+</div>
+</main>
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Aula 6</footer>
+<script src="../../assets/js/piano.js"></script>
+<script>
+(function(){var ok=window.SMProgresso.provaAprovada();document.getElementById(ok?'conteudo':'trancada').hidden=false;})();
+</script>
+<script src="../../assets/js/aula-06-inversoes.js"></script>
+</body>
+</html>

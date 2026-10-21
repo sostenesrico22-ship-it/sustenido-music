@@ -33,6 +33,24 @@
   }
   function names(notes) { return notes.map(function (n) { return P.noteName(n[0]); }).join(' – '); }
 
+  /* ---- Campo harmônico de Dó ---- */
+  if (document.getElementById('kb-campo')) {
+    var CAMPO = [['C', 'Dó maior', 60], ['Dm', 'Ré menor', 62], ['Em', 'Mi menor', 64], ['F', 'Fá maior', 65], ['G', 'Sol maior', 67], ['Am', 'Lá menor', 69], ['Bdim', 'Si diminuto', 71]];
+    var SC = [60, 62, 64, 65, 67, 69, 71, 72, 74, 76, 77, 79];
+    var ckb = new P.Keyboard(document.getElementById('kb-campo'), { low: 60, high: 79 });
+    var cinfo = document.getElementById('campo-info');
+    var showCampo = function (i, sound) {
+      var r = SC.indexOf(CAMPO[i][2]);
+      var notes = [[SC[r], 'T'], [SC[r + 2], '3ª'], [SC[r + 4], '5ª']];
+      show(ckb, notes);
+      cinfo.innerHTML = '<b>' + CAMPO[i][0] + '</b> = ' + CAMPO[i][1] + ': <b>' + names(notes) + '</b>';
+      Array.prototype.forEach.call(document.querySelectorAll('[data-campo]'), function (b) { b.setAttribute('aria-pressed', +b.getAttribute('data-campo') === i); });
+      if (sound) play(notes, false);
+    };
+    document.addEventListener('click', function (e) { var b = e.target.closest && e.target.closest('[data-campo]'); if (b) showCampo(+b.getAttribute('data-campo'), true); });
+    showCampo(0, false);
+  }
+
   /* ---- Explorador ---- */
   var state = { chord: 'C', inv: 0 };
   var kb = new P.Keyboard(document.getElementById('kb-inv'), { low: 60, high: 79, onKey: function (m) { var c = synth.ensure(); if (c) synth.note(m, c.currentTime + 0.02, 1.2, 0.7); } });
