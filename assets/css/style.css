@@ -269,3 +269,8 @@ a.lesson:hover{border-color:var(--gold)}
 .chip.inv-t{background:#C62828;color:#fff}.chip.inv-3{background:#2A9D8F;color:#fff}.chip.inv-5{background:#C9A227;color:#1F2A44}
 .kb-inv{max-width:640px;margin:8px auto}.kb-inv svg{display:block;width:100%;height:auto;touch-action:manipulation;user-select:none;-webkit-user-select:none}
 .inv-row{justify-content:center;margin:6px 0}.inv-info{text-align:center;min-height:2.6em}
+/* Aula 6 · Primeira música */
+#score-pm{width:100%;overflow:hidden}#score-pm svg{display:block;width:100%;height:auto}
+#score-pm .vf-stavenote.hl-rh path,#score-pm .vf-stavenote.hl-rh rect{fill:var(--rh-dark);stroke:var(--rh-dark)}
+#score-pm .vf-stavenote.hl-lh path,#score-pm .vf-stavenote.hl-lh rect{fill:var(--lh-dark);stroke:var(--lh-dark)}
+#score-pm .vf-stavenote.dim{opacity:.35}

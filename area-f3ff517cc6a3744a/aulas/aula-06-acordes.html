@@ -137,6 +137,36 @@
     </div>
   </section>
 
+  <section class="card" id="primeira-musica">
+    <h2>5. Primeira música: melodia + acordes</h2>
+    <p>Agora vamos juntar tudo! A <b>mão direita</b> toca uma melodia simples (adaptada de <i>Brilha, brilha estrelinha</i>) e a <b>mão esquerda</b> faz os acordes <b>C – Am – Dm – G</b>, usando inversões para a mão quase não sair do lugar.</p>
+    <div class="table-scroll"><table class="scale-table">
+      <tr><th style="text-align:left">Cifra</th><th>Notas (mão esquerda)</th><th>Posição</th></tr>
+      <tr><th style="text-align:left">C</th><td>Dó – Mi – Sol</td><td>Estado fundamental</td></tr>
+      <tr><th style="text-align:left">Am</th><td>Dó – Mi – Lá</td><td>1ª inversão (começa na terça, Dó)</td></tr>
+      <tr><th style="text-align:left">Dm</th><td>Ré – Fá – Lá</td><td>Estado fundamental</td></tr>
+      <tr><th style="text-align:left">G</th><td>Si – Ré – Sol</td><td>1ª inversão (começa na terça, Si)</td></tr>
+    </table></div>
+    <div class="tip"><b>Segredo:</b> de C para Am só o Sol vira Lá; de Am para Dm o Dó vira Ré e o Mi vira Fá; para o G a mão desce um pouquinho. Poucos movimentos = troca de acorde fácil!</div>
+    <div id="score-pm" role="img" aria-label="Partitura em pauta dupla: melodia na clave de Sol e acordes C, Am, Dm, G na clave de Fá, com cifras em cima."></div>
+    <div id="kb-pm" class="kb-inv"></div>
+    <p id="pm-info" class="inv-info" aria-live="polite">Aperte ▶ Tocar para ouvir e ver as mãos.</p>
+    <div class="seg" role="group" aria-label="Escolha a mão">
+      <button class="btn rh" type="button" data-pm-mode="rh" aria-pressed="false">Só mão direita</button>
+      <button class="btn lh" type="button" data-pm-mode="lh" aria-pressed="false">Só mão esquerda</button>
+      <button class="btn both" type="button" data-pm-mode="both" aria-pressed="true">As duas</button>
+    </div>
+    <div class="tempo">
+      <div class="tempo-head"><label for="pm-tempo">Andamento</label><output id="pm-tempo-out" for="pm-tempo">80 bpm</output></div>
+      <input type="range" id="pm-tempo" min="50" max="120" step="5" value="80" style="width:100%">
+    </div>
+    <div class="btn-row inv-row">
+      <button class="btn btn-play" type="button" id="pm-play" aria-pressed="false">▶ Tocar</button>
+      <button class="btn" type="button" id="pm-stop">⏹ Do início</button>
+    </div>
+    <p><small>Amarelo = mão direita (melodia) · Verde = mão esquerda (acorde). Comece só com uma mão, bem devagar, e depois junte as duas.</small></p>
+  </section>
+
   <section class="card exercise">
     <h2>✍️ Exercícios práticos</h2>
     <ol>
@@ -145,6 +175,7 @@
       <li>Leia as cifras e diga o nome: (a) Am; (b) G; (c) Em; (d) F#.</li>
       <li>Toque Dó, Fá e Sol maior nas três posições (fundamental, 1ª e 2ª inversão), falando o nome das notas.</li>
       <li>Toque a sequência C → F (2ª inversão) → G (1ª inversão) → C, mexendo a mão o mínimo possível.</li>
+      <li>Primeira música: toque só a mão esquerda (C – Am – Dm – G), depois só a melodia, e por fim as duas juntas no andamento 60.</li>
     </ol>
     <details><summary><b>Ver respostas do exercício 3</b></summary><p>(a) Lá menor · (b) Sol maior · (c) Mi menor · (d) Fá sustenido maior.</p></details>
   </section>
@@ -166,5 +197,7 @@
 (function(){var ok=window.SMProgresso.provaAprovada();document.getElementById(ok?'conteudo':'trancada').hidden=false;})();
 </script>
 <script src="../../assets/js/aula-06-inversoes.js"></script>
+<script src="../../assets/js/vendor/vexflow-bravura.js"></script>
+<script src="../../assets/js/aula-06-primeira-musica.js"></script>
 </body>
 </html>
