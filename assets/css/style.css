@@ -274,3 +274,11 @@ a.lesson:hover{border-color:var(--gold)}
 #score-pm .vf-stavenote.hl-rh path,#score-pm .vf-stavenote.hl-rh rect{fill:var(--rh-dark);stroke:var(--rh-dark)}
 #score-pm .vf-stavenote.hl-lh path,#score-pm .vf-stavenote.hl-lh rect{fill:var(--lh-dark);stroke:var(--lh-dark)}
 #score-pm .vf-stavenote.dim{opacity:.35}
+#score-pb{width:100%;overflow:hidden}#score-pb svg{display:block;width:100%;height:auto}
+#score-pb .vf-stavenote.hl-rh path,#score-pb .vf-stavenote.hl-rh rect{fill:var(--rh-dark);stroke:var(--rh-dark)}
+#score-pb .vf-stavenote.hl-lh path,#score-pb .vf-stavenote.hl-lh rect{fill:var(--lh-dark);stroke:var(--lh-dark)}
+#score-pb .vf-stavenote.dim{opacity:.35}
+.inv-imgs{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0}.inv-imgs figure{margin:0}.inv-imgs img{width:100%;max-width:420px;display:block;margin:0 auto}
+@media(min-width:720px){.inv-imgs{grid-template-columns:repeat(3,1fr)}}
+.rev-q{margin:12px 0;padding:10px;border:1px solid #dde;border-radius:10px}.rev-q .opts{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rev-q .opt.ok{background:#2A9D8F;color:#fff}.rev-q .opt.err{background:#C62828;color:#fff}
