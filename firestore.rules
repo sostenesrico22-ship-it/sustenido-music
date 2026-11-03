@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isProfessor() {
+      return request.auth != null
+        && request.auth.token.email == 'sostenesrico22@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+    // Professor: acesso total
+    match /{document=**} {
+      allow read, write: if isProfessor();
+    }
+    // Aluno (login anônimo): só o próprio envio
+    match /provas/{provaId}/envios/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null && request.auth.uid == uid
+        && !request.resource.data.keys().hasAny(['liberado', 'correcaoAberta', 'nota']);
+      allow update: if request.auth != null && request.auth.uid == uid
+        && resource.data.get('status', '') != 'enviada'
+        && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['liberado', 'correcaoAberta', 'nota']);
+    }
+  }
+}
