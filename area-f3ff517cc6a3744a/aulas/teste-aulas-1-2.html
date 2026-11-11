@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teste · Aulas 1 e 2 — Sustenido Music</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script src="../../assets/js/site.js"></script>
+<script src="../../assets/js/progresso.js"></script>
+<style>
+.opt{display:flex;gap:12px;align-items:center;width:100%;text-align:left;background:#fff;border:2px solid #d6dae6;border-radius:12px;padding:12px;margin:8px 0;font:inherit;cursor:pointer;color:inherit}
+.opt .box{flex:0 0 34px;height:34px;border:2px solid #1F2A44;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:800}
+.opt.sel{border-color:#1F2A44;background:#eef1fa}.opt.sel .box{background:#1F2A44;color:#fff}
+.opt.sel .box::after{content:"✕";margin-left:2px;font-size:.8em}
+#nome{width:100%;font:inherit;padding:12px;border-radius:10px;border:2px solid #ccd;margin:8px 0}
+.lesson-nav{margin-top:14px}
+.salvo{font-size:.85em;color:#2E7D32;min-height:1.2em}
+</style>
+</head>
+<body data-prova-id="aulas-1-2" data-mc="4" data-trava="nenhuma" data-libera="">
+<header class="site-header">
+  <div class="wrap">
+    <span class="brand">
+      <img src="../../assets/img/logo.svg" alt="">
+      <span class="brand-text"><span class="brand-name" data-site="brand" data-split>Sustenido <span>Music</span></span><span class="brand-sub" data-site="tagline">Elevando seu conhecimento</span></span>
+    </span>
+    <a class="header-link" id="hdr-link" href="../index.html">‹ Aulas</a>
+  </div>
+</header>
+<main class="wrap">
+  <div class="lesson-title">
+    <span class="kicker">Aula 1 + Aula 2 — Teste</span>
+    <h1>Teste das Aulas 1 e 2</h1>
+    <p>5 questões · 4 de marcar e 1 escrita. Suas respostas vão direto para o professor.</p>
+  </div>
+  <section class="card lockbox" id="trancada" hidden>
+    <div class="big">🔒</div>
+    <h2 style="justify-content:center">Teste trancado</h2>
+    <a class="btn" href="../index.html">Voltar às aulas</a>
+  </section>
+  <section class="card" id="inicio" hidden>
+    <h2>Antes de começar</h2>
+    <ul>
+      <li>O teste é <b>sem consulta</b>: as aulas ficam escondidas e a tela fica cheia.</li>
+      <li>Não saia do teste: o professor vê se você sair da tela.</li>
+      <li>Cada resposta vai na hora para o professor, que acompanha ao vivo e corrige a questão escrita.</li>
+    </ul>
+    <label for="nome"><b>Seu nome completo</b></label>
+    <input id="nome" autocomplete="name" placeholder="Digite seu nome">
+    <p class="err" id="erro-ini" hidden style="color:#C62828;font-weight:700"></p>
+    <div class="concluir"><button type="button" class="btn-concluir feita" id="comecar">Começar o teste</button></div>
+  </section>
+  <form class="card" id="prova" hidden>
+    <h2>Questões</h2>
+<div class="quiz-q mc" data-q="0"><p>1. Na Aula 1, aprendemos que música é:</p><button type="button" class="opt" data-l="A"><span class="box">A</span><span>Barulho organizado só com instrumentos</span></button><button type="button" class="opt" data-l="B"><span class="box">B</span><span>A arte de organizar sons e silêncios no tempo</span></button><button type="button" class="opt" data-l="C"><span class="box">C</span><span>Apenas notas agudas tocadas forte</span></button><button type="button" class="opt" data-l="D"><span class="box">D</span><span>Cantar sem parar, sem pausas</span></button></div>
+<div class="quiz-q mc" data-q="1"><p>2. Notas tocadas <b>uma depois da outra</b> — a parte que a gente canta — formam a:</p><button type="button" class="opt" data-l="A"><span class="box">A</span><span>Harmonia</span></button><button type="button" class="opt" data-l="B"><span class="box">B</span><span>Ritmo</span></button><button type="button" class="opt" data-l="C"><span class="box">C</span><span>Melodia</span></button><button type="button" class="opt" data-l="D"><span class="box">D</span><span>Intensidade</span></button></div>
+<div class="quiz-q mc" data-q="2"><p>3. Na cifra (as notas em letras), a nota <b>Fá</b> é:</p><button type="button" class="opt" data-l="A"><span class="box">A</span><span>G</span></button><button type="button" class="opt" data-l="B"><span class="box">B</span><span>E</span></button><button type="button" class="opt" data-l="C"><span class="box">C</span><span>F</span></button><button type="button" class="opt" data-l="D"><span class="box">D</span><span>A</span></button></div>
+<div class="quiz-q mc" data-q="3"><p>4. Sobre o sustenido (♯) e o bemol (♭), é correto dizer:</p><button type="button" class="opt" data-l="A"><span class="box">A</span><span>O ♯ desce meio tom e o ♭ sobe meio tom</span></button><button type="button" class="opt" data-l="B"><span class="box">B</span><span>Dó♯ e Ré♭ são a mesma tecla preta</span></button><button type="button" class="opt" data-l="C"><span class="box">C</span><span>Dó♯ e Ré♭ ficam em teclas brancas diferentes</span></button><button type="button" class="opt" data-l="D"><span class="box">D</span><span>O ♯ deixa a nota mais forte</span></button></div>
+<div class="quiz-q" data-q="4"><p>5. ✍️ Escreva com suas palavras: <b>o que é uma oitava?</b></p><textarea id="aberta" rows="3" style="width:100%;font:inherit;padding:10px;border-radius:10px;border:2px solid #ccd" placeholder="Digite sua resposta aqui"></textarea></div>
+    <p class="salvo" id="salvo"></p>
+    <p class="err" id="falta" hidden style="color:#C62828;font-weight:700">Responda todas as questões antes de enviar.</p>
+    <div class="concluir"><button class="btn-concluir feita" type="submit">Enviar respostas</button></div>
+  </form>
+  <section class="card" id="resultado" hidden>
+    <div class="result ok" id="res-msg">✅ Respostas enviadas! O professor vai corrigir.</div>
+    <p id="res-lib">Muito bem! Agora siga para a Aula 3.</p>
+    <div class="concluir" style="margin-top:10px" id="res-acoes"><a class="btn-concluir feita" style="text-decoration:none" href="aula-03-as-notas-no-piano.html">Ir para a Aula 3 ›</a><a class="btn" href="../index.html">Lista de aulas</a></div>
+  </section>
+  <nav class="lesson-nav" id="nav-teste" aria-label="Navegação entre aulas">
+    <a class="nav-prev" href="aula-02-as-notas-musicais.html"><small>‹ Aula anterior</small><b>2 · As notas musicais</b></a>
+    <a class="nav-next" href="aula-03-as-notas-no-piano.html"><small>Próxima aula ›</small><b>3 · As notas no piano</b></a>
+  </nav>
+</main>
+<footer class="site-footer">© <span data-site="brand">Sustenido Music</span> · Prof. <span data-site="teacher">Sóstenes Silva</span> · Teste das Aulas 1 e 2</footer>
+<script type="module" src="../../assets/js/prova-online.js"></script>
+</body>
+</html>

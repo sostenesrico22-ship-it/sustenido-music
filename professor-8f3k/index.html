@@ -36,13 +36,13 @@ table.prof{border-collapse:collapse;width:100%;font-size:.9em;background:#fff}
     <p class="warn" id="erro" hidden></p>
   </section>
   <section class="card" id="painel" hidden>
-    <h2>Prova do Básico — ao vivo</h2>
+    <h2 id="titulo">Aula 1 + Aula 2 — Teste · ao vivo</h2>
     <div class="bar">
-      <label>Prova: <select id="provaSel"><option value="basico-1">Básico 1 (aulas 1–5)</option></select></label>
+      <label>Prova / teste: <select id="provaSel"><optgroup label="Teclado · Nível Básico"><option value="aulas-1-2" selected>Aula 1 + Aula 2 — Teste (5 questões)</option><option value="basico-1">Prova do Básico (aulas 1–5)</option></optgroup></select></label>
       <span id="resumo"></span>
       <button class="mini" id="arquivar">🗂 Arquivar rodada</button>
     </div>
-    <p style="font-size:.85em">Gabarito: <span id="gab"></span> · Q10 escrita: <i>Tom, Tom, Semitom, Tom, Tom, Tom, Semitom</i></p>
+    <p style="font-size:.85em">Gabarito: <span id="gab"></span> · <span id="abertaNome">Q escrita</span> (você corrige com ✓/✗): <i id="esperado"></i></p>
     <div class="tbl-wrap"><table class="prof"><thead id="thead"></thead><tbody id="tbody"><tr><td>Carregando…</td></tr></tbody></table></div>
   </section>
 </main>

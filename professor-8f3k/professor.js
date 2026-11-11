@@ -5,7 +5,17 @@ import { getFirestore, collection, onSnapshot, doc, updateDoc, writeBatch, serve
 
 const PROFESSOR = "sostenesrico22@gmail.com";
 // Gabarito fica SÓ aqui no app do professor
-const GABARITO = { "basico-1": { q1:"B", q2:"C", q3:"A", q4:"D", q5:"B", q6:"A", q7:"C", q8:"D", q9:"A" } };
+const GABARITO = {
+  "aulas-1-2": { q1:"B", q2:"C", q3:"C", q4:"B" },
+  "basico-1": { q1:"B", q2:"C", q3:"A", q4:"D", q5:"B", q6:"A", q7:"C", q8:"D", q9:"A" }
+};
+// Como cada prova/teste aparece no painel
+const INFO = {
+  "aulas-1-2": { titulo: "Aula 1 + Aula 2 — Teste · ao vivo", total: 5, aberta: "Q5 escrita",
+    esperado: "Oitava = de um Dó até o próximo Dó (depois do Si volta o Dó, mais agudo)", libera: null },
+  "basico-1": { titulo: "Prova do Básico — ao vivo", total: 10, aberta: "Q10 escrita",
+    esperado: "Tom, Tom, Semitom, Tom, Tom, Tom, Semitom", libera: "Aula 6" }
+};
 const $ = (i) => document.getElementById(i);
 const app = initializeApp(firebaseConfig), auth = getAuth(app), db = getFirestore(app);
 let unsub = null, docsAtuais = [];
@@ -29,10 +39,12 @@ $('provaSel').onchange = escutar;
 
 function escutar() {
   if (unsub) unsub();
-  const pid = $('provaSel').value, g = GABARITO[pid];
+  const pid = $('provaSel').value, g = GABARITO[pid], info = INFO[pid], nMc = Object.keys(g).length;
+  $('titulo').textContent = info.titulo;
   $('gab').textContent = Object.entries(g).map(([k, v]) => k.slice(1) + v).join(' ');
+  $('abertaNome').textContent = info.aberta; $('esperado').textContent = info.esperado;
   $('thead').innerHTML = '<tr><th>Aluno</th><th>Status</th>' + Object.keys(g).map(k => '<th>' + k.slice(1) + '</th>').join('') +
-    '<th>Acertos</th><th>Q10 escrita</th><th>Nota</th><th>Saídas</th><th>Aula 6</th></tr>';
+    '<th>Acertos</th><th>' + info.aberta + '</th><th>Nota</th><th>Saídas</th>' + (info.libera ? '<th>' + info.libera + '</th>' : '') + '</tr>';
   unsub = onSnapshot(collection(db, 'provas', pid, 'envios'), (snap) => {
     docsAtuais = snap.docs;
     const linhas = snap.docs.map(d => ({ id: d.id, ...d.data() })).sort((a, b) => (a.nome || '').localeCompare(b.nome || ''));
@@ -42,16 +54,16 @@ function escutar() {
       const cels = Object.keys(g).map(k => { if (!r[k]) return '<td class="vz">—</td>'; const c = r[k] === g[k]; if (c) ac++; return '<td class="' + (c ? 'ok' : 'no') + '">' + esc(r[k]) + '</td>'; }).join('');
       const ca = a.correcaoAberta; if (a.status === 'enviada') env++;
       const nota = ac + (ca === true ? 1 : 0);
-      const notaTxt = (ca === true || ca === false) ? nota + '/10' : nota + '/10 <small>(falta Q10)</small>';
+      const notaTxt = (ca === true || ca === false) ? nota + '/' + info.total : nota + '/' + info.total + ' <small>(falta ' + info.aberta.split(' ')[0] + ')</small>';
       const sai = a.saidasDaTela || 0;
       return '<tr data-id="' + a.id + '"><td class="nome">' + esc(a.nome || '(sem nome)') + '</td>' +
         '<td><span class="st ' + (a.status === 'enviada' ? 'env' : '') + '">' + (a.status === 'enviada' ? 'Enviada' : 'Fazendo…') + '</span></td>' + cels +
-        '<td><b>' + ac + '/9</b></td>' +
+        '<td><b>' + ac + '/' + nMc + '</b></td>' +
         '<td class="aberta ' + (ca === true ? 'ok' : ca === false ? 'no' : '') + '">' + (esc(a.textoAberta) || '<span class="vz">—</span>') +
         '<br><button class="mini ' + (ca === true ? 'on' : '') + '" data-ac="certa">✓ Certa</button><button class="mini ' + (ca === false ? 'on' : '') + '" data-ac="errada">✗ Errada</button></td>' +
         '<td><b>' + notaTxt + '</b></td>' +
         '<td>' + (sai ? '<span class="warn">⚠ saiu ' + sai + 'x</span>' : '✓') + '</td>' +
-        '<td><button class="mini lib ' + (a.liberado ? 'on' : '') + '" data-ac="lib">' + (a.liberado ? '✓ Liberada' : 'Liberar Aula 6') + '</button></td></tr>';
+        (info.libera ? '<td><button class="mini lib ' + (a.liberado ? 'on' : '') + '" data-ac="lib">' + (a.liberado ? '✓ Liberada' : 'Liberar ' + info.libera) + '</button></td>' : '') + '</tr>';
     }).join('') : '<tr><td colspan="16">Nenhum aluno ainda. As respostas aparecem aqui ao vivo.</td></tr>';
     $('resumo').textContent = linhas.length + ' aluno(s) · ' + env + ' enviada(s)';
   }, (e) => { $('tbody').innerHTML = '<tr><td class="warn">Erro: ' + esc(e.code) + '</td></tr>'; });

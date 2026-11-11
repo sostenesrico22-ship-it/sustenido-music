@@ -4,14 +4,20 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, doc, setDoc, getDoc, onSnapshot, serverTimestamp, increment } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-const PROVA_ID = "basico-1";
+// Configuração pela página (<body data-prova-id data-mc data-trava data-libera>).
+// Sem atributos = Prova do Básico (comportamento original).
+const CFG = document.body.dataset;
+const PROVA_ID = CFG.provaId || "basico-1";
+const NUM_MC = +(CFG.mc || 9);              // nº de questões de marcar
+const TRAVA = CFG.trava || "basico";        // "basico" = exige aulas 1–5 · "nenhuma" = sem trava
+const LIBERA = CFG.libera ?? "aula6";       // "aula6" = professor libera a Aula 6 · "" = não libera nada
 const $ = (i) => document.getElementById(i);
 const P = window.SMProgresso;
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app), db = getFirestore(app);
 let ref = null, emProva = false, respostas = {};
 
-function semConsulta(on){ $('hdr-link').hidden = on; document.querySelector('footer').hidden = on; }
+function semConsulta(on){ $('hdr-link').hidden = on; document.querySelector('footer').hidden = on; const nv = $('nav-teste'); if(nv) nv.style.display = on ? 'none' : ''; }
 function salvo(t){ $('salvo').textContent = t; }
 async function salvar(dados){
   if(!ref) return;
@@ -24,6 +30,7 @@ function mostrarEnviada(){
 function escutarLiberacao(){
   onSnapshot(ref, (s) => {
     const d = s.data(); if(!d) return;
+    if(LIBERA !== "aula6") return;
     if(d.liberado === true && !P.provaAprovada()){
       P.aprovar(typeof d.nota === 'number' ? Math.round(d.nota*10) : '');
     }
@@ -34,7 +41,7 @@ function escutarLiberacao(){
   }, (e) => console.warn(e));
 }
 
-if(!P.basicoCompleto() && !P.provaAprovada()){ $('trancada').hidden = false; }
+if(TRAVA === "basico" && !P.basicoCompleto() && !P.provaAprovada()){ $('trancada').hidden = false; }
 else {
   $('inicio').hidden = false;
   try{ $('nome').value = localStorage.getItem('sm_tpz_nome') || ''; }catch(e){}
@@ -87,7 +94,7 @@ window.addEventListener('beforeunload', (e) => { if(emProva){ e.preventDefault()
 
 $('prova').onsubmit = async (e) => {
   e.preventDefault();
-  const falta = Object.keys(respostas).length < 9 || !$('aberta').value.trim();
+  const falta = Object.keys(respostas).length < NUM_MC || !$('aberta').value.trim();
   if(falta){ $('falta').hidden = false; return; }
   $('falta').hidden = true;
   emProva = false;
