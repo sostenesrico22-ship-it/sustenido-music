@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1F2A44"><link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/site2.css"><link rel="stylesheet" href="sax-publico.css">
+<title>Cadastro · Sax alto — Sustenido Music</title></head><body>
+<header class="top"><div class="wrap"><a class="logo" href="index.html"><img src="../assets/img/logo.svg" alt=""><span class="logo-text"><span class="logo-name">Sustenido <span>Music</span></span><span class="logo-tagline">Elevando seu conhecimento</span></span></a></div></header><nav class="tabs"><a href="index.html#aulas">Sax alto</a><a href="index.html#conteudo">Conteúdo</a><a href="index.html#valores">Valores</a><a href="cadastro.html">Cadastro</a><a href="acesso.html">Área do aluno</a><a href="../index.html?s=1">Curso de teclado</a></nav>
+
+<section class="blk"><div class="wrap" style="max-width:640px"><h2>Cadastro · Sax alto</h2><p>Aula particular de <b>sax alto a domicílio</b> com o Prof. Sóstenes Silva. Preencha seus dados: ao enviar, o cadastro vai para o WhatsApp do professor e em seguida você vai para a página de pagamento.</p>
+<form id="f" novalidate>
+<fieldset><legend>Curso</legend>
+<label>Curso escolhido<select name="curso" required><option selected value="Sax alto · aula particular a domicílio (R$ 230,00/mês)">Sax alto · R$ 230,00/mês</option></select></label>
+<label class="check"><input type="checkbox" name="pacote"> <span>Tenho interesse no pacote <b>sax + teclado</b> (com desconto, valor a consultar)</span></label>
+</fieldset>
+<fieldset><legend>Dados do aluno</legend>
+<label>Nome completo *<input name="nome" required autocomplete="name" minlength="5"></label>
+<div class="row2"><label>Data de nascimento *<input name="nasc" type="date" required min="1915-01-01"></label><label>Idade<input name="idade" readonly tabindex="-1" placeholder="calculada"></label></div>
+<label><span>CPF <small>(opcional)</small></span><input name="cpf" inputmode="numeric" placeholder="000.000.000-00" maxlength="14"></label>
+<p class="err small" id="cpf-err" hidden>CPF inválido. Confira ou deixe em branco.</p>
+<label>WhatsApp (com DDD) *<input name="whatsapp" required inputmode="tel" placeholder="(73) 99999-9999" autocomplete="tel" maxlength="15"></label>
+<label>E-mail *<input name="email" type="email" required autocomplete="email"></label>
+<div id="resp-box" hidden><label><span>Nome do responsável * <small>(aluno menor de 18 anos)</small></span><input name="responsavel" autocomplete="off"></label></div>
+</fieldset>
+<fieldset><legend>Endereço das aulas (a domicílio)</legend>
+<label>Rua *<input name="rua" required autocomplete="address-line1"></label>
+<div class="row2"><label>Número *<input name="numero" required inputmode="numeric"></label><label>Bairro *<input name="bairro" required></label></div>
+<label>Cidade *<input name="cidade" required value="Ilhéus-BA" autocomplete="address-level2"></label>
+<label>Ponto de referência<input name="referencia" placeholder="Ex.: perto da igreja, casa de portão azul"></label>
+</fieldset>
+<fieldset><legend>Sax e estudo</legend>
+<label>Experiência com sax *<select name="nivel" required><option value="">Selecione…</option><option>Nunca toquei</option><option>Já tirei algumas notas</option><option>Toco um pouco (básico)</option><option>Toco outro instrumento, sax nunca</option></select></label>
+<label>Você já tem sax alto? *<select name="temsax" required><option value="">Selecione…</option><option>Sim, já tenho sax alto</option><option>Ainda não, quero indicação para comprar</option><option>Vou alugar/emprestar</option></select></label>
+<div class="grp"><span class="lbl">Dias preferidos *</span><div class="chips" id="dias"><label><input type="checkbox" value="Seg">Seg</label><label><input type="checkbox" value="Ter">Ter</label><label><input type="checkbox" value="Qua">Qua</label><label><input type="checkbox" value="Qui">Qui</label><label><input type="checkbox" value="Sex">Sex</label><label><input type="checkbox" value="Sáb">Sáb</label></div></div>
+<div class="grp"><span class="lbl">Turno *</span><div class="chips" id="turnos"><label><input type="checkbox" value="Manhã">Manhã</label><label><input type="checkbox" value="Tarde">Tarde</label><label><input type="checkbox" value="Noite">Noite</label></div></div>
+<label><span>Horário preferido <small>(opcional)</small></span><input name="horario" placeholder="Ex.: depois das 18h"></label>
+<label>Seu objetivo com o sax *<textarea name="objetivo" rows="3" required placeholder="Ex.: tocar no louvor da igreja"></textarea></label>
+</fieldset>
+<div class="declara"><label class="check"><input type="checkbox" name="aceite" id="aceite"> <span id="decl-txt"></span></label></div>
+<p class="err" id="err" aria-live="polite">Preencha os campos com * e marque a declaração para enviar.</p>
+<button class="btn gold" type="submit" id="enviar" disabled>Enviar cadastro e ir para o pagamento</button>
+<p class="note">Seus dados são usados só para contato e organização das aulas.</p>
+</form></div></section>
+<footer>© 2026 Sustenido Music · Prof. Sóstenes Silva · Ilhéus-BA<br>Informações: <a href="https://wa.me/5573982035208">WhatsApp (73) 98203-5208</a></footer><a class="float-wa" href="https://wa.me/5573982035208?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Sustenido%20Music%20e%20quero%20informa%C3%A7%C3%B5es%20sobre%20as%20aulas%20de%20sax%20alto" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg></a><script>
+(function(){
+var f=document.getElementById('f'),btn=document.getElementById('enviar'),err=document.getElementById('err'),decl=document.getElementById('decl-txt');
+function idade(){var v=f.nasc.value;if(!v)return null;var d=new Date(v+'T12:00:00'),n=new Date(),a=n.getFullYear()-d.getFullYear();var m=n.getMonth()-d.getMonth();if(m<0||(m===0&&n.getDate()<d.getDate()))a--;return a;}
+function menor(){var a=idade();return a!==null&&a<18;}
+function cpfOk(v){v=v.replace(/\D/g,'');if(!v)return true;if(v.length!==11||/^(\d)\1+$/.test(v))return false;for(var t=9;t<11;t++){var s=0;for(var i=0;i<t;i++)s+=+v[i]*(t+1-i);var r=(s*10)%11%10;if(r!==+v[t])return false;}return true;}
+function marcados(id){return Array.prototype.map.call(document.querySelectorAll('#'+id+' input:checked'),function(i){return i.value;});}
+function texto(){var nome=f.nome.value.trim()||'[seu nome]';
+ if(menor()){var r=f.responsavel.value.trim()||'[nome do responsável]';return 'Eu, '+r+', responsável pelo(a) aluno(a) '+nome+', declaro que as informações acima são verdadeiras e confirmo a contratação dos serviços de aula particular de saxofone alto a domicílio com o professor Sóstenes Silva (Sustenido Music), no valor de R$ 230,00 mensais.';}
+ return 'Eu, '+nome+', declaro que as informações acima são verdadeiras e confirmo a contratação dos serviços de aula particular de saxofone alto a domicílio com o professor Sóstenes Silva (Sustenido Music), no valor de R$ 230,00 mensais.';}
+function valido(){var req=['nome','nasc','whatsapp','email','rua','numero','bairro','cidade','nivel','temsax','objetivo'];
+ for(var i=0;i<req.length;i++)if(!f[req[i]].value.trim())return false;
+ if(f.nome.value.trim().length<5||!f.email.checkValidity())return false;
+ var a=idade();if(a===null||a<4||a>110)return false;
+ if(f.whatsapp.value.replace(/\D/g,'').length<10)return false;
+ if(!cpfOk(f.cpf.value))return false;
+ if(menor()&&!f.responsavel.value.trim())return false;
+ if(!marcados('dias').length||!marcados('turnos').length)return false;
+ return f.aceite.checked;}
+function atualiza(){var a=idade();f.idade.value=a===null?'':a+' anos';
+ var m=menor();document.getElementById('resp-box').hidden=!m;f.responsavel.required=m;
+ document.getElementById('cpf-err').hidden=cpfOk(f.cpf.value);
+ decl.textContent=texto();var ok=valido();btn.disabled=!ok;err.hidden=ok;}
+f.cpf.addEventListener('input',function(){var v=this.value.replace(/\D/g,'').slice(0,11);this.value=v.replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d{1,2})$/,'$1-$2');});
+f.whatsapp.addEventListener('input',function(){var v=this.value.replace(/\D/g,'').slice(0,11);this.value=v.length>6?'('+v.slice(0,2)+') '+v.slice(2,v.length-4)+'-'+v.slice(-4):v.length>2?'('+v.slice(0,2)+') '+v.slice(2):v;});
+f.addEventListener('input',atualiza);f.addEventListener('change',atualiza);atualiza();
+function dataBR(v){var p=v.split('-');return p[2]+'/'+p[1]+'/'+p[0];}
+f.addEventListener('submit',function(e){e.preventDefault();atualiza();if(!valido())return;
+ var agora=new Date(),quando;
+ try{quando=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Bahia',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}).format(agora).replace(',',' às');}catch(x){quando=agora.toLocaleString('pt-BR');}
+ var v=function(k){return f[k].value.trim();};
+ var L=['*Cadastro · Sax alto (aula particular a domicílio)*','*Sustenido Music*','','*Aluno(a)*','Nome: '+v('nome'),'Nascimento: '+dataBR(v('nasc'))+' ('+idade()+' anos)','CPF: '+(v('cpf')||'não informado'),'WhatsApp: '+v('whatsapp'),'E-mail: '+v('email')];
+ if(menor())L.push('Responsável: '+v('responsavel'));
+ L.push('','*Endereço das aulas*','Rua: '+v('rua')+', nº '+v('numero'),'Bairro: '+v('bairro'),'Cidade: '+v('cidade'),'Ponto de referência: '+(v('referencia')||'não informado'),
+  '','*Sax e estudo*','Curso: '+v('curso'),'Pacote sax + teclado: '+(f.pacote.checked?'tenho interesse':'não'),'Experiência: '+v('nivel'),'Tem sax alto: '+v('temsax'),'Dias preferidos: '+marcados('dias').join(', '),'Turno: '+marcados('turnos').join(', '),'Horário preferido: '+(v('horario')||'não informado'),'Objetivo: '+v('objetivo'),
+  '','*Declaração*','"'+texto()+'"','✅ Confirmado em '+quando+' (horário da Bahia)');
+ var t=L.join('\n');
+ try{localStorage.setItem('sm_sax_nome',v('nome').split(' ')[0]);sessionStorage.setItem('sm_sax_msg',t);}catch(x){}
+ window.SM_SAX_MSG=t;
+ window.open('https://wa.me/5573982035208?text='+encodeURIComponent(t),'_blank');
+ location.href='pagamento.html';});
+})();
+</script></body></html>
