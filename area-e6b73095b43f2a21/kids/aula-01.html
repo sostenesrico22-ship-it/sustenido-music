@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula 1 · O que é música — Sustenido Music Kids</title>
+<meta name="theme-color" content="#1F2A44">
+<link rel="icon" href="../../assets/img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../assets/css/site2.css">
+<link rel="stylesheet" href="../../kids/kids.css">
+</head>
+<body class="kids">
+<header class="top"><div class="wrap">
+  <a href="../index.html" aria-label="Sustenido Music Kids — Área do aluno"><img class="logo-kids" src="../../kids/img/logo-kids-branco.png" alt="Sustenido Music Kids — Elevando seu conhecimento"></a>
+  <a class="back" href="../index.html">‹ Aulas</a>
+</div></header>
+
+<main class="wrap k-main">
+  <div class="k-title"><span class="pill">Aula 1</span><h1>O que é música</h1></div>
+
+  <div class="k-video">
+    <video preload="metadata" playsinline poster="videos/poster-aula-01.jpg">
+      <source src="videos/aula-01.mp4" type="video/mp4">
+      <track kind="subtitles" srclang="pt-BR" label="Português" src="videos/aula-01.vtt" default>
+    </video>
+    <div class="soon" style="background-image:url(videos/poster-aula-01.jpg)" role="img" aria-label="Vídeo da Aula 1 em breve"></div>
+  </div>
+
+  <!-- 0. Nido se apresenta -->
+  <section class="k-block" aria-labelledby="t0">
+    <div class="k-intro">
+      <img src="../../kids/img/avatar-kids-explica.jpg" alt="Nido acenando na sala de aula" width="960" height="720">
+      <div class="nido" style="margin:0"><div class="bubble" style="font-size:1.25rem"><span class="who">Nido</span>Oi! Eu sou o <b>Nido</b>! 👋<br>Hoje a gente vai descobrir o que é <b>música</b>!<br>
+        <button class="btn-ouvir" type="button" data-fala="Oi! Eu sou o Nido, da Sustenido Music Kids! Hoje a gente vai descobrir o que é música!">🔊 Ouvir o Nido</button></div></div>
+    </div>
+  </section>
+
+  <!-- 1. O que é música: sons organizados + silêncio -->
+  <section class="k-block sky" aria-labelledby="t1">
+    <h2 id="t1">🎵 O que é música?</h2>
+    <div class="nido"><img src="../../kids/img/nido-rosto.jpg" alt="Nido">
+      <div class="bubble"><span class="who">Nido</span>Música é <b>arrumar os sons</b> 🔊 e os <b>silêncios</b> 🤫, um depois do outro, no tempo certinho!<br>
+        <button class="btn-ouvir" type="button" data-fala="Música é a arte de organizar sons e silêncios no tempo. É arrumar os sons, um depois do outro, no tempo certinho! Olha a diferença: sons arrumadinhos, e sons bagunçados.">🔊 Ouvir o Nido</button></div>
+    </div>
+    <div class="org">
+      <div class="box"><b>Arrumado 😊</b><div class="stage" id="org-ok" aria-hidden="true"><span style="left:4%;top:58%">🎵</span><span style="left:26%;top:42%">🎵</span><span style="left:48%;top:26%">🎵</span><span style="left:70%;top:10%">🎵</span></div><button class="bigbtn" type="button" data-sound="arrumado"><span class="e">▶️</span>Ouvir</button></div>
+      <div class="box mess"><b>Bagunçado 😵</b><div class="stage" id="org-no" aria-hidden="true"><span style="left:60%;top:55%">🎵</span><span style="left:8%;top:12%">🎵</span><span style="left:72%;top:4%">🎵</span><span style="left:30%;top:50%">🎵</span></div><button class="bigbtn" type="button" data-sound="baguncado"><span class="e">▶️</span>Ouvir</button></div>
+    </div>
+    <div class="pair">
+      <h3>🤫 O silêncio também é música!</h3><span class="hint">é a pausa: o som descansa</span>
+      <div class="sounds-row" id="somsil" aria-hidden="true"><span>🔊</span><span>🤫</span><span>🔊</span><span>🤫</span><span>🔊</span></div>
+      <div class="big-row" style="grid-template-columns:1fr"><button class="bigbtn" type="button" data-sound="somSilencio"><span class="e">▶️</span>Ouvir som e silêncio</button></div>
+      <p class="center" style="text-align:center;margin:8px 0 0"><button class="btn-ouvir" type="button" data-fala="O silêncio também é música! É a pausa, a horinha de o som descansar. Escute: som, silêncio, som, silêncio, som!">🔊 Ouvir o Nido</button></p>
+    </div>
+  </section>
+
+  <!-- 1b. O som é o que a gente estuda -->
+  <section class="k-block lilac" aria-labelledby="t1b">
+    <h2 id="t1b">👂 O som é o que a gente estuda</h2>
+    <div class="nido"><img src="../../kids/img/nido-rosto.jpg" alt="Nido">
+      <div class="bubble"><span class="who">Nido</span>O som anda pelo ar como uma <b>onda</b> 🌊 até a nossa orelha! 👂<br>
+        <button class="btn-ouvir" type="button" data-fala="Na música, a gente estuda o som! O som anda pelo ar como uma onda, até chegar na nossa orelha. Toque no botão e veja a onda do som!">🔊 Ouvir o Nido</button></div>
+    </div>
+    <svg class="wave-k" id="onda" viewBox="0 0 320 90" role="img" aria-label="Onda do som"><g><path d="M0 45 Q20 10 40 45 T80 45 T120 45 T160 45 T200 45 T240 45 T280 45 T320 45 T360 45 T400 45"/></g></svg>
+    <div class="ear" aria-hidden="true">🎹 〰️〰️ 👂</div>
+    <div class="big-row" style="grid-template-columns:1fr"><button class="bigbtn" type="button" data-sound="onda"><span class="e">🌊</span>Ver a onda do som</button></div>
+  </section>
+
+  <!-- 2. Os 3 elementos -->
+  <section class="k-block mint" aria-labelledby="t2">
+    <h2 id="t2">A música tem 3 partes</h2>
+    <div class="nido"><img src="../../kids/img/nido-rosto.jpg" alt="Nido">
+      <div class="bubble"><span class="who">Nido</span>🎤 <b>Melodia</b>: a gente canta.<br>🤝 <b>Harmonia</b>: notas juntinhas.<br>🥁 <b>Ritmo</b>: o balanço!<br>
+        <button class="btn-ouvir" type="button" data-fala="A música tem três partes. Melodia: são as notas uma depois da outra, é a parte que a gente canta. Harmonia: são as notas tocadas juntas, ao mesmo tempo, é o acompanhamento. E ritmo: é o tempo dos sons e das pausas, é o balanço da música! Toque nos botões para ouvir.">🔊 Ouvir o Nido</button></div>
+    </div>
+    <div class="big-row three">
+      <button class="bigbtn" type="button" data-sound="melodia"><span class="e">🎤</span>Melodia</button>
+      <button class="bigbtn" type="button" data-sound="harmonia"><span class="e">🤝</span>Harmonia</button>
+      <button class="bigbtn" type="button" data-sound="ritmo"><span class="e">🥁</span>Ritmo</button>
+    </div>
+  </section>
+
+  <!-- 3. Qualidades do som -->
+  <section class="k-block peach" aria-labelledby="t3">
+    <h2 id="t3">Os jeitos do som</h2>
+    <div class="nido"><img src="../../kids/img/nido-rosto.jpg" alt="Nido">
+      <div class="bubble"><span class="who">Nido</span>Todo som tem 4 jeitos. Toque e compare!<br>
+        <button class="btn-ouvir" type="button" data-fala="Todo som tem quatro jeitos. Altura: o som pode ser grave, grossão como um urso, ou agudo, fininho como um passarinho. Duração: pode ser curto ou longo. Intensidade: pode ser fraquinho ou forte. E timbre: é a voz de cada instrumento, como o piano e a flauta. Toque e compare!">🔊 Ouvir o Nido</button></div>
+    </div>
+    <div class="pair"><h3>Grave ou agudo?</h3><span class="hint">grosso 🐻 · fino 🐤</span>
+      <div class="big-row"><button class="bigbtn" type="button" data-sound="grave"><span class="e">🐻</span>Grave</button><button class="bigbtn" type="button" data-sound="agudo"><span class="e">🐤</span>Agudo</button></div></div>
+    <div class="pair"><h3>Curto ou longo?</h3><span class="hint">pulinho 🐇 · compridão 🐍</span>
+      <div class="big-row"><button class="bigbtn" type="button" data-sound="curto"><span class="e">🐇</span>Curto</button><button class="bigbtn" type="button" data-sound="longo"><span class="e">🐍</span>Longo</button></div></div>
+    <div class="pair"><h3>Fraco ou forte?</h3><span class="hint">baixinho 🐭 · forte 🦁</span>
+      <div class="big-row"><button class="bigbtn" type="button" data-sound="fraco"><span class="e">🐭</span>Fraco</button><button class="bigbtn" type="button" data-sound="forte"><span class="e">🦁</span>Forte</button></div></div>
+    <div class="pair"><h3>Timbre: a voz do instrumento</h3>
+      <div class="big-row"><button class="bigbtn" type="button" data-sound="piano"><span class="e">🎹</span>Piano</button><button class="bigbtn" type="button" data-sound="flauta"><span class="e">🪈</span>Flauta</button></div></div>
+  </section>
+
+  <!-- Resumo -->
+  <section class="k-block lilac" aria-labelledby="t4">
+    <h2 id="t4">⭐ Resumo do Nido</h2>
+    <div class="home-fun">
+      <div><span class="e">🎤</span>Melodia = notas uma depois da outra</div>
+      <div><span class="e">🤝</span>Harmonia = notas juntas</div>
+      <div><span class="e">🥁</span>Ritmo = o tempo e o balanço</div>
+    </div>
+    <p style="text-align:center;margin:12px 0 0"><button class="btn-ouvir" type="button" data-fala="Resumo! Melodia são as notas uma depois da outra. Harmonia são as notas juntas. E ritmo é o tempo e o balanço da música.">🔊 Ouvir o Nido</button></p>
+  </section>
+
+  <!-- Jogo -->
+  <section class="game" id="jogo" aria-labelledby="t5">
+    <h2 id="t5">🎮 Jogo das estrelas</h2>
+    <div class="stars" aria-label="Estrelas"></div>
+    <div class="center"><button class="bigbtn g-start" type="button" style="margin:8px auto;width:100%;max-width:320px"><span class="e">▶️</span>Começar o jogo</button></div>
+    <div class="g-play" hidden>
+      <div class="g-q" aria-live="polite"></div>
+      <div class="g-opts"></div>
+      <p class="center" style="margin:12px 0 0"><button class="btn-ouvir g-repeat" type="button">🔁 Ouvir de novo</button></p>
+    </div>
+  </section>
+
+  <!-- Em casa -->
+  <section class="k-block" aria-labelledby="t6">
+    <h2 id="t6">🏠 Brinque em casa</h2>
+    <div class="home-fun">
+      <div><span class="e">🤫</span>Fique 1 minutinho em silêncio. Que sons você ouviu? Era grave ou agudo?</div>
+      <div><span class="e">🎤</span>Cante um louvor que você conhece: essa é a melodia!</div>
+      <div><span class="e">👏</span>Agora bata palmas no balanço dele: esse é o ritmo!</div>
+      <div><span class="e">🐻🐤</span>Fale grosso e fino, baixinho e forte!</div>
+    </div>
+    <p style="text-align:center;margin:12px 0 0"><button class="btn-ouvir" type="button" data-fala="Brinque em casa! Fique um minutinho em silêncio e preste atenção: que sons você ouviu? Era grave ou agudo? Curto ou longo? Depois, cante um louvor que você conhece: essa é a melodia! Agora bata palmas no balanço dele: esse é o ritmo! E, pra terminar, fale grosso e fino, baixinho e forte!">🔊 Ouvir o Nido</button></p>
+  </section>
+
+  <nav class="k-nav" aria-label="Navegação entre aulas">
+    <a href="../index.html"><small>‹ Voltar</small>Aulas</a>
+    <a class="next" href="aula-02.html"><small>Próxima ›</small>Aula 2 · As notas</a>
+  </nav>
+</main>
+
+<footer>© 2026 Sustenido Music Kids · Prof. Sóstenes Silva · Aula 1</footer>
+<script src="../../assets/js/piano.js"></script>
+<script src="../../assets/js/lessons-common.js"></script>
+<script src="../../kids/kids.js"></script>
+<script src="../../kids/kids-aula-01.js"></script>
+</body>
+</html>
