@@ -3,7 +3,7 @@
    cabeçalho, rodapé, página inicial e título da aba são atualizados automaticamente. */
 window.SITE = {
   brand: 'Sustenido Music',
-  tagline: 'Site de aulas de música: teoria e prática de piano popular',
+  tagline: 'Elevando seu conhecimento',
   teacher: 'Sóstenes Silva'
 };
 (function (S) {
