@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1F2A44"><link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/site2.css"><link rel="stylesheet" href="sax-publico.css">
+<!DOCTYPE html><html lang="pt-BR" data-sm-curso="sax" data-sm-acesso="acesso.html" data-sm-cadastro="cadastro.html" data-sm-pagina="acesso"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#1F2A44"><link rel="icon" href="../assets/img/logo.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/site2.css"><link rel="stylesheet" href="sax-publico.css">
 <title>Área do aluno · Sax Alto — Sustenido Music</title></head><body>
 <header class="top"><div class="wrap"><a class="logo" href="index.html"><img src="../assets/img/logo.svg" alt=""><span class="logo-text"><span class="logo-name">Sustenido <span>Music</span></span><span class="logo-tagline">Elevando seu conhecimento</span></span></a></div></header><nav class="tabs"><a href="index.html#aulas">Sax alto</a><a href="index.html#conteudo">Conteúdo</a><a href="index.html#valores">Valores</a><a href="cadastro.html">Cadastro</a><a href="acesso.html">Área do aluno</a><a href="../index.html?s=1">Curso de teclado</a></nav>
 
@@ -9,4 +9,5 @@
 async function h(s){var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0')}).join('').slice(0,16);}
 document.getElementById('f').addEventListener('submit',async function(e){e.preventDefault();var c=e.target.c.value.trim().toUpperCase(),k=await h(c),u='area-'+k+'/index.html';
 var r=await fetch(u,{method:'HEAD'});if(r.ok){location.href=u;}else document.getElementById('err').hidden=false;});
-</script></body></html>
+</script>
+<script src="../assets/js/ja-cadastrado.js"></script></body></html>
